@@ -133,3 +133,36 @@ padding:10px;
 text-decoration:none;
 
 }
+
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 280px;
+    background: #161b22;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    margin-bottom: 4px;
+}
+
+.sidebar a:hover {
+    background: #1f2937;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+}
