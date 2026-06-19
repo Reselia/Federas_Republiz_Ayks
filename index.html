@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Активация системы | Федерация Республик Аякса</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="loading-page">
+
+
+<div class="terminal">
+
+
+<div class="fake-emblem">
+
+◈
+
+</div>
+
+
+
+<h1>
+
+ФЕДЕРАЦИЯ РЕСПУБЛИК АЯКСА
+
+</h1>
+
+
+<h2>
+
+CENTRAL DATABASE SYSTEM
+
+</h2>
+
+
+
+<div class="spinner">
+
+◢ ◣
+<br>
+◥ ◤
+
+</div>
+
+
+
+
+<div id="logs">
+
+</div>
+
+
+
+
+<div class="progress-box">
+
+<div id="progress"></div>
+
+</div>
+
+
+
+<p id="status">
+
+Инициализация системы...
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+const logs = [
+
+"Запуск центрального ядра........ OK",
+
+"Проверка систем безопасности..... OK",
+
+"Подключение архивных узлов....... OK",
+
+"Загрузка базы данных............. OK",
+
+"Проверка целостности файлов...... OK",
+
+"Синхронизация мировых архивов.... OK",
+
+"Активация А.И.Я.................. OK",
+
+"Проверка протоколов доступа...... OK",
+
+"Центральная система готова........ OK"
+
+];
+
+
+
+let current = 0;
+
+let progress = 0;
+
+
+
+const logBox = document.getElementById("logs");
+
+const bar = document.getElementById("progress");
+
+const status = document.getElementById("status");
+
+
+
+
+
+let loader = setInterval(()=>{
+
+
+if(current < logs.length){
+
+
+let line=document.createElement("p");
+
+line.textContent="> "+logs[current];
+
+
+logBox.appendChild(line);
+
+
+current++;
+
+
+}
+
+
+
+progress += Math.floor(Math.random()*10)+5;
+
+
+
+if(progress>=100){
+
+
+progress=100;
+
+
+clearInterval(loader);
+
+
+status.textContent="ДОСТУП РАЗРЕШЁН";
+
+
+setTimeout(()=>{
+
+
+window.location.href="archive.html";
+
+
+},2000);
+
+
+}
+
+
+
+bar.style.width=progress+"%";
+
+
+status.textContent=
+"Загрузка данных: "+progress+"%";
+
+
+
+},2000);
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
