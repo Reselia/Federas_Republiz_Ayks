@@ -419,3 +419,152 @@ button {
     margin-bottom:25px;
 
 }
+
+/* =========================
+   FEDERATION BOOT SYSTEM
+========================= */
+
+
+.loading-page {
+
+background:#05070a;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-family:monospace;
+
+}
+
+
+.terminal {
+
+
+width:700px;
+
+padding:40px;
+
+background:#0d1117;
+
+border:1px solid #30363d;
+
+text-align:center;
+
+}
+
+
+
+.fake-emblem {
+
+
+font-size:90px;
+
+color:#58a6ff;
+
+animation:spin 5s linear infinite;
+
+}
+
+
+
+.spinner {
+
+
+font-size:40px;
+
+color:#58a6ff;
+
+margin:25px;
+
+animation:spin 2s linear infinite;
+
+}
+
+
+
+@keyframes spin {
+
+
+from {
+
+transform:rotate(0deg);
+
+}
+
+
+to {
+
+transform:rotate(360deg);
+
+}
+
+
+}
+
+
+
+.terminal h2 {
+
+
+color:#58a6ff;
+
+}
+
+
+
+#logs {
+
+
+height:180px;
+
+overflow:hidden;
+
+text-align:left;
+
+color:#8b949e;
+
+}
+
+
+
+.progress-box {
+
+
+height:15px;
+
+background:#161b22;
+
+border:1px solid #30363d;
+
+}
+
+
+
+#progress {
+
+
+height:100%;
+
+width:0%;
+
+background:#58a6ff;
+
+transition:0.5s;
+
+}
+
+
+
+#status {
+
+
+color:#58a6ff;
+
+margin-top:20px;
+
+}
