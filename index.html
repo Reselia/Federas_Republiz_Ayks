@@ -153,7 +153,26 @@ const status = document.getElementById("status");
 
 let loader = setInterval(()=>{
 
+// ПРОПУСК ЗАГРУЗКИ
 
+
+const skipButton = document.getElementById("skip-loader");
+
+
+skipButton.onclick = function(){
+
+
+    clearInterval(loader);
+
+
+    status.textContent =
+    "ACCESS GRANTED // MANUAL OVERRIDE";
+
+
+    window.location.href="archive.html";
+
+
+};
 if(current < logs.length){
 
 
