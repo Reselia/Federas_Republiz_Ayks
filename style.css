@@ -950,3 +950,54 @@ button {
 
 
 }
+
+.system-data {
+
+
+margin-top:25px;
+
+
+font-size:14px;
+
+
+text-align:left;
+
+
+color:#008f3d;
+
+
+line-height:1.8;
+
+
+opacity:0.8;
+
+
+animation:dataPulse 3s infinite;
+
+
+}
+
+
+
+@keyframes dataPulse {
+
+
+0%,100% {
+
+
+opacity:0.5;
+
+
+}
+
+
+50% {
+
+
+opacity:1;
+
+
+}
+
+
+}
