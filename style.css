@@ -477,7 +477,7 @@ button {
 
 /* Убираем возможные полосы браузера */
 
-html {
+body.loading-page {
 
     overflow:hidden;
 
