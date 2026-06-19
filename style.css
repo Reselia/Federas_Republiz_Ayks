@@ -1119,3 +1119,54 @@ body.loading-page {
 
 
 }
+
+/* =========================
+   КНОПКА ПРОПУСКА ЗАГРУЗКИ
+========================= */
+
+
+.skip-block {
+
+    margin-top:25px;
+
+}
+
+
+
+#skip-loader {
+
+
+    background:transparent;
+
+    color:#00ff66;
+
+    border:1px solid #00ff66;
+
+    padding:12px 25px;
+
+    font-family:monospace;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+
+}
+
+
+
+#skip-loader:hover {
+
+
+    background:#00ff66;
+
+    color:#020402;
+
+    box-shadow:
+
+    0 0 15px rgba(0,255,100,0.8);
+
+
+}
