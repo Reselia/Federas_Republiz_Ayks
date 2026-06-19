@@ -1157,6 +1157,54 @@ body.loading-page {
 
     }
 
+    
 
 }
+}
+/* =========================
+   УЛУЧШЕННАЯ ТИПОГРАФИКА ФРА
+========================= */
+
+.content {
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+/* Заголовки */
+.content h1 {
+    font-size: 34px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.content h2 {
+    margin-top: 45px;
+    margin-bottom: 18px;
+    font-size: 24px;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 8px;
+}
+
+.content h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #58a6ff;
+}
+
+/* Параграфы */
+.content p {
+    margin-bottom: 14px;
+    color: #c9d1d9;
+}
+
+/* Карточки — делаем легче */
+.card {
+    margin: 20px 0;
+    padding: 20px;
+}
+
+/* Разделение блоков внутри текста */
+.content br {
+    line-height: 1.2;
 }
