@@ -1,0 +1,133 @@
+/* ==================================
+   ТАБЛИЦЫ ПРОТОКОЛОВ А.И.Я
+================================== */
+
+
+.protocol-table-wrapper {
+
+    width:100%;
+
+    overflow-x:auto;
+
+    margin:40px 0;
+
+}
+
+
+
+.protocol-table {
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:#161b22;
+
+    color:#c9d1d9;
+
+    font-size:15px;
+
+}
+
+
+
+.protocol-table th {
+
+    background:#1f2937;
+
+    color:#58a6ff;
+
+    padding:15px;
+
+    border:1px solid #30363d;
+
+    text-align:center;
+
+}
+
+
+
+.protocol-table td {
+
+    padding:14px;
+
+    border:1px solid #30363d;
+
+    vertical-align:middle;
+
+}
+
+
+
+/* Код протокола */
+
+.protocol-table td:nth-child(1) {
+
+    text-align:center;
+
+    font-weight:bold;
+
+    white-space:nowrap;
+
+}
+
+
+
+/* Тип */
+
+.protocol-table td:last-child {
+
+    text-align:center;
+
+    font-size:20px;
+
+}
+
+
+
+/* Наведение */
+
+.protocol-table tr:hover {
+
+    background:#1c2530;
+
+}
+
+
+
+/* Ширина колонок */
+
+
+.protocol-table th:nth-child(1),
+.protocol-table td:nth-child(1){
+
+    width:90px;
+
+}
+
+
+
+.protocol-table th:nth-child(2),
+.protocol-table td:nth-child(2){
+
+    width:220px;
+
+}
+
+
+
+.protocol-table th:nth-child(3),
+.protocol-table td:nth-child(3){
+
+    width:180px;
+
+}
+
+
+
+.protocol-table th:nth-child(5),
+.protocol-table td:nth-child(5){
+
+    width:80px;
+
+}
