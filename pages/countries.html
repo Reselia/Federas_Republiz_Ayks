@@ -2,40 +2,450 @@
 <html lang="ru">
 
 <head>
+
 <meta charset="UTF-8">
-<title>Иные государства</title>
+
+<title>Государства | Федерация Республик Аякса</title>
+
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+
 <link rel="stylesheet" href="../style.css">
+
+
+<style>
+
+/* =========================
+   ЦЕНТРАЛЬНАЯ БАЗА ГОСУДАРСТВ
+========================= */
+
+#countries-content {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================
+   ЗАГОЛОВОК
+========================= */
+
+#countries-content h1 {
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
+
+    line-height: 1.3;
+
+    text-align: center;
+
+}
+
+
+/* =========================
+   ОПИСАНИЕ
+========================= */
+
+.countries-description {
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+
+    opacity: 0.85;
+
+    text-align: center;
+
+}
+
+
+/* =========================
+   СПИСОК ГОСУДАРСТВ
+========================= */
+
+.countries-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+/* =========================
+   СТРОКА ГОСУДАРСТВА
+========================= */
+
+.country-row {
+
+    display: grid;
+
+    grid-template-columns:
+
+    2fr
+    1.3fr
+    1.7fr
+    1.5fr;
+
+    align-items: center;
+
+    gap: 25px;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 20px 24px;
+
+    background:
+
+    linear-gradient(
+
+        145deg,
+
+        rgba(20, 40, 75, 0.85),
+
+        rgba(8, 18, 38, 0.95)
+
+    );
+
+    border:
+
+    1px solid
+
+    rgba(45, 140, 255, 0.45);
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    transition:
+
+    transform 0.25s ease,
+
+    box-shadow 0.25s ease,
+
+    border-color 0.25s ease;
+
+}
+
+
+/* =========================
+   НАВЕДЕНИЕ
+========================= */
+
+.country-row:hover {
+
+    transform:
+
+    translateY(-3px);
+
+    border-color:
+
+    rgba(80, 170, 255, 0.9);
+
+    box-shadow:
+
+    0 0 18px
+
+    rgba(30, 130, 255, 0.25);
+
+}
+
+
+/* =========================
+   НАЗВАНИЕ ГОСУДАРСТВА
+========================= */
+
+.country-name {
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+
+}
+
+
+/* =========================
+   ID
+========================= */
+
+.country-id {
+
+    margin-top: 5px;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    color:
+
+    rgba(120, 190, 255, 0.7);
+
+}
+
+
+/* =========================
+   ПОДПИСИ
+========================= */
+
+.country-label {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color:
+
+    rgba(120, 190, 255, 0.65);
+
+}
+
+
+/* =========================
+   РАССТОЯНИЕ
+========================= */
+
+.country-distance {
+
+    font-size: 15px;
+
+    color:
+
+    rgba(235, 245, 255, 0.9);
+
+}
+
+
+/* =========================
+   ПОСОЛЬСТВА
+========================= */
+
+.country-embassy {
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+.embassy-status {
+
+    display: block;
+
+}
+
+
+.embassy-yes {
+
+    color:
+
+    rgba(100, 220, 150, 0.9);
+
+}
+
+
+.embassy-no {
+
+    color:
+
+    rgba(220, 130, 130, 0.85);
+
+}
+
+
+/* =========================
+   ШКАЛА НАПРЯЖЁННОСТИ
+========================= */
+
+.country-tension {
+
+    min-width: 0;
+
+}
+
+
+.tension-bar {
+
+    display: flex;
+
+    gap: 4px;
+
+    width: 100%;
+
+    max-width: 180px;
+
+    margin-top: 7px;
+
+}
+
+
+.tension-segment {
+
+    flex: 1;
+
+    height: 7px;
+
+    border-radius: 3px;
+
+    background:
+
+    rgba(100, 140, 180, 0.2);
+
+    border:
+
+    1px solid
+
+    rgba(100, 160, 220, 0.15);
+
+}
+
+
+.tension-segment.active {
+
+    background:
+
+    rgba(60, 160, 255, 0.85);
+
+    box-shadow:
+
+    0 0 6px
+
+    rgba(40, 140, 255, 0.3);
+
+}
+
+
+.tension-value {
+
+    font-size: 13px;
+
+    color:
+
+    rgba(170, 210, 255, 0.85);
+
+}
+
+
+/* =========================
+   АДАПТИВНОСТЬ
+========================= */
+
+@media (max-width: 900px) {
+
+    .country-row {
+
+        grid-template-columns:
+
+        1fr 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .country-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+    }
+
+
+    #countries-content h1 {
+
+        font-size: 28px;
+
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+
 <div class="container">
 
-<div class="sidebar">
 
-<h2>🌍 Иные государства</h2>
+<!-- =========================
+     ОСНОВНОЕ СОДЕРЖИМОЕ
+========================= -->
 
-<a href="../archive.html">
-Главная
-</a>
+<div class="content" id="countries-content">
 
-<hr>
 
-<a href="#">Империя Белой Ночи</a>
+<h1>
 
-</div>
+Центральная база данных государств
 
-<div class="content">
+</h1>
 
-<h1>Иные государства</h1>
 
-<p>
-Архив государств и политических образований.
+<p class="countries-description">
+
+Центральный архив иностранных государств и политических образований,
+связанных с историей и событиями вселенной.
+
 </p>
 
-</div>
+
+<!-- =========================
+     СПИСОК ГОСУДАРСТВ
+     
+     Государства автоматически
+     загружаются через countries.js
+========================= -->
+
+<div
+class="countries-list"
+id="countries-list"
+>
 
 </div>
+
+
+</div>
+
+
+</div>
+
+
+
+<!-- =========================
+     ДАННЫЕ ГОСУДАРСТВ
+========================= -->
+
+<script src="countries/countries-data.js"></script>
+
+
+<!-- =========================
+     СОЗДАНИЕ СТРОК ГОСУДАРСТВ
+========================= -->
+
+<script src="countries/countries.js"></script>
+
 
 </body>
 
