@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Персонажи | Федерация Республик Аякса</title>
+
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+<link rel="stylesheet" href="../style.css">
+
+
+<style>
+
+/* =========================
+   БАЗА ДАННЫХ ПЕРСОНАЖЕЙ
+========================= */
+
+#characters-content {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+/* Заголовок */
+
+#characters-content h1 {
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
+
+    line-height: 1.3;
+
+}
+
+
+/* Описание базы */
+
+.characters-description {
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+
+    opacity: 0.85;
+
+}
+
+
+/* =========================
+   СЕТКА КАРТОЧЕК
+========================= */
+
+.characters-grid {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fill, minmax(520px, 1fr));
+
+    gap: 25px;
+
+}
+
+
+/* =========================
+   КАРТОЧКА ПЕРСОНАЖА
+========================= */
+
+.character-card {
+
+    display: block;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    background: rgba(255, 255, 255, 0.04);
+
+    padding: 20px;
+
+    transition: 0.25s;
+
+    cursor: pointer;
+
+}
+
+
+.character-card:hover {
+
+    transform: translateY(-3px);
+
+    border-color: rgba(255, 255, 255, 0.5);
+
+    background: rgba(255, 255, 255, 0.08);
+
+}
+
+
+/* =========================
+   ID
+========================= */
+
+.character-id {
+
+    text-align: center;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+
+    opacity: 0.8;
+
+}
+
+
+/* =========================
+   ОСНОВНАЯ ЧАСТЬ
+========================= */
+
+.character-main {
+
+    display: flex;
+
+    gap: 25px;
+
+    align-items: center;
+
+}
+
+
+/* =========================
+   ФОТОГРАФИЯ
+========================= */
+
+.character-photo {
+
+    width: 150px;
+
+    height: 190px;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+
+/* =========================
+   ИНФОРМАЦИЯ
+========================= */
+
+.character-info {
+
+    flex: 1;
+
+}
+
+
+.character-name {
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    line-height: 1.3;
+
+    margin-bottom: 10px;
+
+}
+
+
+.character-position {
+
+    font-size: 18px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================
+   ПРИНАДЛЕЖНОСТЬ
+========================= */
+
+.character-affiliation {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border-left: 2px solid rgba(255, 255, 255, 0.4);
+
+    padding-left: 12px;
+
+}
+
+
+.character-flag {
+
+    width: 45px;
+
+    height: 30px;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+
+}
+
+
+.character-affiliation-name {
+
+    font-size: 15px;
+
+    line-height: 1.3;
+
+}
+
+
+/* =========================
+   КНОПКА
+========================= */
+
+.character-open {
+
+    text-align: right;
+
+    margin-top: 20px;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    opacity: 0.7;
+
+}
+
+
+/* =========================
+   АДАПТИВНОСТЬ
+========================= */
+
+@media (max-width: 700px) {
+
+    .characters-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .character-main {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .character-photo {
+
+        width: 130px;
+
+        height: 165px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<!-- =========================
+     БОКОВОЕ МЕНЮ
+========================= -->
+
+<div class="sidebar">
+
+
+<h2>
+👤 Персонажи
+</h2>
+
+
+<a href="../archive.html">
+Главная
+</a>
+
+
+<hr>
+
+
+<a href="#">
+База персонажей
+</a>
+
+
+</div>
+
+
+
+<!-- =========================
+     ОСНОВНОЕ СОДЕРЖИМОЕ
+========================= -->
+
+<div class="content" id="characters-content">
+
+
+<h1>
+База данных персоналий
+</h1>
+
+
+<p class="characters-description">
+
+Центральный архив персонажей и персоналий,
+связанных с историей и событиями вселенной.
+
+</p>
+
+
+
+<div class="characters-grid">
+
+
+<!-- =========================
+     КАРТОЧКА РЕСЕЛИИ
+========================= -->
+
+<a
+href="characters/reselia.html"
+class="character-card"
+>
+
+
+<div class="character-id">
+
+ID: FRA-C-001
+
+</div>
+
+
+
+<div class="character-main">
+
+
+<img
+src="../media/images/characters/reselia.png"
+alt="Реселия Рэй Кристалия"
+class="character-photo"
+>
+
+
+
+<div class="character-info">
+
+
+<div class="character-name">
+
+РЕСЕЛИЯ РЭЙ КРИСТАЛИЯ
+
+</div>
+
+
+<div class="character-position">
+
+Канцлер
+
+</div>
+
+
+
+<div class="character-affiliation">
+
+
+<img
+src="../media/images/flags/fra.png"
+alt="Федерация Республик Аякса"
+class="character-flag"
+>
+
+
+<div class="character-affiliation-name">
+
+Федерация Республик Аякса
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="character-open">
+
+ОТКРЫТЬ ДОСЬЕ →
+
+</div>
+
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>
