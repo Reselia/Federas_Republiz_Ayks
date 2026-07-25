@@ -36,21 +36,39 @@ countries.forEach(country => {
     const nameBlock = document.createElement("div");
 
 
-    nameBlock.innerHTML = `
+nameBlock.innerHTML = `
 
-        <div class="country-name">
+    <div class="country-name-container">
 
-            ${country.name}
+        ${
+            country.flag
+            ? `<img
+                src="${country.flag}"
+                alt="${country.name}"
+                class="country-flag"
+            >`
+            : ""
+        }
+
+        <div>
+
+            <div class="country-name">
+
+                ${country.name}
+
+            </div>
+
+            <div class="country-id">
+
+                ID: ${country.id}
+
+            </div>
 
         </div>
 
-        <div class="country-id">
+    </div>
 
-            ID: ${country.id}
-
-        </div>
-
-    `;
+`;
 
 
     /* =========================
