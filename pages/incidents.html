@@ -2,40 +2,132 @@
 <html lang="ru">
 
 <head>
+
 <meta charset="UTF-8">
-<title>Инциденты</title>
+
+<title>Инциденты | Федерация Республик Аякса</title>
+
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+
 <link rel="stylesheet" href="../style.css">
+
 </head>
+
 
 <body>
 
+
 <div class="container">
+
 
 <div class="sidebar">
 
+
 <h2>⚠ Инциденты</h2>
+
 
 <a href="../archive.html">
 Главная
 </a>
 
+
 <hr>
 
-<a href="#">Контакт TS-02</a>
+
+<a href="#" onclick="loadIncident('ts-02.html')">
+Контакт TS-02
+</a>
+
 
 </div>
 
-<div class="content">
 
-<h1>Инциденты</h1>
+<div class="content" id="incidents-content">
+
+
+<h1>
+Инциденты
+</h1>
+
 
 <p>
 Архив инцидентов и происшествий.
 </p>
 
-</div>
 
 </div>
+
+
+</div>
+
+
+
+<script>
+
+
+function loadIncident(incident){
+
+
+fetch("incidents/" + incident)
+
+.then(response => {
+
+
+if(!response.ok){
+
+throw new Error("Ошибка загрузки");
+
+}
+
+
+return response.text();
+
+
+})
+
+
+.then(data => {
+
+
+document.getElementById("incidents-content").innerHTML = data;
+
+
+
+let titles = {
+
+
+"ts-02.html":
+"Инцидент TS-02 | Федерация Республик Аякса"
+
+
+};
+
+
+
+document.title =
+titles[incident] ||
+"Инциденты | Федерация Республик Аякса";
+
+
+})
+
+
+.catch(error => {
+
+
+document.getElementById("incidents-content").innerHTML =
+
+"<h2>Ошибка загрузки данных</h2>";
+
+
+});
+
+
+}
+
+
+</script>
+
 
 </body>
 
