@@ -42,7 +42,7 @@
 </div>
 
 
-<div class="content" id="incidents-content">
+<div class="content" id="incident-content">
 
 
 <h1>
@@ -51,7 +51,12 @@
 
 
 <p>
-Архив инцидентов и происшествий.
+Архив инцидентов и происшествий Федерации Республик Аякса.
+</p>
+
+
+<p>
+Выберите инцидент из списка слева для просмотра подробной информации.
 </p>
 
 
@@ -61,19 +66,19 @@
 </div>
 
 
-
 <script>
 
 
-function loadIncident(incident){
+function loadIncident(incident) {
 
 
 fetch("incidents/" + incident)
 
+
 .then(response => {
 
 
-if(!response.ok){
+if (!response.ok) {
 
 throw new Error("Ошибка загрузки");
 
@@ -89,24 +94,7 @@ return response.text();
 .then(data => {
 
 
-document.getElementById("incidents-content").innerHTML = data;
-
-
-
-let titles = {
-
-
-"ts-02.html":
-"Инцидент TS-02 | Федерация Республик Аякса"
-
-
-};
-
-
-
-document.title =
-titles[incident] ||
-"Инциденты | Федерация Республик Аякса";
+document.getElementById("incident-content").innerHTML = data;
 
 
 })
@@ -115,9 +103,11 @@ titles[incident] ||
 .catch(error => {
 
 
-document.getElementById("incidents-content").innerHTML =
+document.getElementById("incident-content").innerHTML =
 
-"<h2>Ошибка загрузки данных</h2>";
+"<h2>Ошибка загрузки инцидента</h2>" +
+
+"<p>Не удалось загрузить данные.</p>";
 
 
 });
