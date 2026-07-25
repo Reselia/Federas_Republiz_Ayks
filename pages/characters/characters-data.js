@@ -30,7 +30,7 @@ const characters = [
 
     flag: "../media/images/federation_flat_v4_no_folds.png",
 
-    profile: "characters/constancia.html"
+    profile: "constancia.html"
 }
 
 ];
