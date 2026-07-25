@@ -27,7 +27,9 @@
 }
 
 
-/* Заголовок */
+/* =========================
+   ЗАГОЛОВОК
+========================= */
 
 #characters-content h1 {
 
@@ -40,7 +42,9 @@
 }
 
 
-/* Описание базы */
+/* =========================
+   ОПИСАНИЕ БАЗЫ
+========================= */
 
 .characters-description {
 
@@ -81,26 +85,64 @@
 
     color: inherit;
 
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background:
+    linear-gradient(
+        145deg,
+        rgba(20, 40, 75, 0.95),
+        rgba(8, 18, 38, 0.98)
+    );
 
-    background: rgba(255, 255, 255, 0.04);
+    border:
 
-    padding: 20px;
+    1px solid
+    rgba(45, 140, 255, 0.8);
 
-    transition: 0.25s;
+    border-radius: 14px;
+
+    padding: 22px;
+
+    box-shadow:
+
+    0 0 12px
+    rgba(30, 120, 255, 0.15),
+
+    inset 0 0 20px
+    rgba(20, 100, 200, 0.05);
+
+    transition:
+
+    transform 0.25s ease,
+
+    box-shadow 0.25s ease,
+
+    border-color 0.25s ease;
 
     cursor: pointer;
 
 }
 
 
+/* =========================
+   ЭФФЕКТ НАВЕДЕНИЯ
+========================= */
+
 .character-card:hover {
 
-    transform: translateY(-3px);
+    transform:
 
-    border-color: rgba(255, 255, 255, 0.5);
+    translateY(-4px);
 
-    background: rgba(255, 255, 255, 0.08);
+    border-color:
+
+    rgba(80, 170, 255, 1);
+
+    box-shadow:
+
+    0 0 20px
+    rgba(30, 130, 255, 0.35),
+
+    inset 0 0 25px
+    rgba(30, 120, 255, 0.08);
 
 }
 
@@ -115,11 +157,20 @@
 
     font-size: 13px;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
 
-    margin-bottom: 10px;
+    color:
 
-    opacity: 0.8;
+    rgba(120, 190, 255, 0.9);
+
+    padding-bottom: 12px;
+
+    margin-bottom: 18px;
+
+    border-bottom:
+
+    1px solid
+    rgba(70, 150, 240, 0.35);
 
 }
 
@@ -132,7 +183,7 @@
 
     display: flex;
 
-    gap: 25px;
+    gap: 24px;
 
     align-items: center;
 
@@ -145,15 +196,25 @@
 
 .character-photo {
 
-    width: 150px;
+    width: 145px;
 
-    height: 190px;
+    height: 185px;
 
     object-fit: cover;
 
     flex-shrink: 0;
 
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+
+    border:
+
+    1px solid
+    rgba(80, 170, 255, 0.6);
+
+    box-shadow:
+
+    0 0 10px
+    rgba(30, 120, 255, 0.2);
 
 }
 
@@ -166,6 +227,29 @@
 
     flex: 1;
 
+    min-width: 0;
+
+}
+
+
+/* =========================
+   ПОДПИСЬ ИМЕНИ
+========================= */
+
+.character-name-label {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color:
+
+    rgba(120, 190, 255, 0.7);
+
+    margin-bottom: 4px;
+
 }
 
 
@@ -175,13 +259,34 @@
 
 .character-name {
 
-    font-size: 20px;
+    font-size: 21px;
 
-    font-weight: bold;
+    font-weight: 600;
 
     line-height: 1.3;
 
-    margin-bottom: 7px;
+    margin-bottom: 18px;
+
+}
+
+
+/* =========================
+   ПОДПИСЬ ДОЛЖНОСТИ
+========================= */
+
+.character-position-label {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color:
+
+    rgba(120, 190, 255, 0.7);
+
+    margin-bottom: 4px;
 
 }
 
@@ -192,18 +297,17 @@
 
 .character-position {
 
-    font-size: 17px;
+    font-size: 18px;
 
     font-weight: 500;
 
     line-height: 1.4;
 
-    margin-bottom: 16px;
-
 }
 
 
 /* =========================
+   НИЖНЯЯ ЧАСТЬ
    ПРИНАДЛЕЖНОСТЬ
 ========================= */
 
@@ -213,33 +317,78 @@
 
     align-items: center;
 
-    gap: 12px;
+    gap: 15px;
 
-    border-left: 2px solid rgba(255, 255, 255, 0.4);
+    margin-top: 22px;
 
-    padding-left: 12px;
+    padding-top: 16px;
+
+    border-top:
+
+    1px solid
+    rgba(70, 150, 240, 0.35);
 
 }
 
 
+/* =========================
+   ФЛАГ
+========================= */
+
 .character-flag {
 
-    width: 45px;
+    width: 52px;
 
-    height: 30px;
+    height: 34px;
 
     object-fit: cover;
 
     flex-shrink: 0;
 
+    border-radius: 4px;
+
+    border:
+
+    1px solid
+    rgba(100, 180, 255, 0.6);
+
 }
 
 
+/* =========================
+   ПРИНАДЛЕЖНОСТЬ
+========================= */
+
 .character-affiliation-name {
 
-    font-size: 15px;
+    font-size: 16px;
 
-    line-height: 1.3;
+    font-weight: 500;
+
+    line-height: 1.4;
+
+}
+
+
+/* =========================
+   ПОДПИСЬ ПРИНАДЛЕЖНОСТИ
+========================= */
+
+.character-affiliation-label {
+
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color:
+
+    rgba(120, 190, 255, 0.7);
+
+    margin-bottom: 3px;
 
 }
 
@@ -252,13 +401,22 @@
 
     text-align: right;
 
-    margin-top: 20px;
+    margin-top: 18px;
 
-    font-size: 14px;
+    padding-top: 12px;
 
-    letter-spacing: 1px;
+    border-top:
 
-    opacity: 0.7;
+    1px solid
+    rgba(70, 150, 240, 0.2);
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    color:
+
+    rgba(130, 200, 255, 0.8);
 
 }
 
@@ -369,6 +527,8 @@ class="character-card"
 >
 
 
+<!-- ID -->
+
 <div class="character-id">
 
 ID: FRA-C-001
@@ -376,6 +536,8 @@ ID: FRA-C-001
 </div>
 
 
+
+<!-- ОСНОВНАЯ ИНФОРМАЦИЯ -->
 
 <div class="character-main">
 
@@ -391,9 +553,23 @@ class="character-photo"
 <div class="character-info">
 
 
+<div class="character-name-label">
+
+Имя
+
+</div>
+
+
 <div class="character-name">
 
 РЕСЕЛИЯ РЭЙ КРИСТАЛИЯ
+
+</div>
+
+
+<div class="character-position-label">
+
+Должность
 
 </div>
 
@@ -405,6 +581,14 @@ class="character-photo"
 </div>
 
 
+</div>
+
+
+</div>
+
+
+
+<!-- ПРИНАДЛЕЖНОСТЬ -->
 
 <div class="character-affiliation">
 
@@ -418,10 +602,16 @@ class="character-flag"
 
 <div class="character-affiliation-name">
 
+
+<span class="character-affiliation-label">
+
+Принадлежность
+
+</span>
+
+
 Федерация Республик Аякса
 
-</div>
-
 
 </div>
 
@@ -429,13 +619,12 @@ class="character-flag"
 </div>
 
 
-</div>
 
-
+<!-- ОТКРЫТИЕ ДОСЬЕ -->
 
 <div class="character-open">
 
-ОТКРЫТЬ ДОСЬЕ →
+ОТКРЫТЬ ПОЛНОЕ ДОСЬЕ →
 
 </div>
 
