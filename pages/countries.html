@@ -60,6 +60,7 @@
 
 }
 
+
 /* =========================
    НАВИГАЦИЯ
 ========================= */
@@ -86,6 +87,7 @@
     border:
 
     1px solid
+
     rgba(45, 140, 255, 0.7);
 
     border-radius: 8px;
@@ -122,9 +124,12 @@
     box-shadow:
 
     0 0 12px
+
     rgba(30, 130, 255, 0.25);
 
 }
+
+
 /* =========================
    СПИСОК ГОСУДАРСТВ
 ========================= */
@@ -153,7 +158,8 @@
     2fr
     1.3fr
     1.7fr
-    1.5fr;
+    1.5fr
+    50px;
 
     align-items: center;
 
@@ -407,40 +413,95 @@
 
 
 /* =========================
-   АДАПТИВНОСТЬ
+   КНОПКА ПОЛНОГО ДОСЬЕ
 ========================= */
 
-@media (max-width: 900px) {
+.country-dossier-button {
 
-    .country-row {
+    display: flex;
 
-        grid-template-columns:
+    align-items: center;
 
-        1fr 1fr;
+    justify-content: center;
 
-    }
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    box-sizing: border-box;
+
+    border:
+
+    1px solid
+
+    rgba(80, 170, 255, 0.75);
+
+    border-radius: 8px;
+
+    background:
+
+    rgba(20, 50, 95, 0.5);
+
+    color:
+
+    rgba(150, 210, 255, 0.95);
+
+    text-decoration: none;
+
+    font-size: 24px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+
+    background 0.25s ease,
+
+    border-color 0.25s ease,
+
+    box-shadow 0.25s ease,
+
+    transform 0.25s ease;
 
 }
 
 
-@media (max-width: 600px) {
+.country-dossier-button:hover {
 
-    .country-row {
+    background:
 
-        grid-template-columns: 1fr;
+    rgba(35, 100, 180, 0.6);
 
-        gap: 15px;
+    border-color:
 
-    }
+    rgba(100, 190, 255, 1);
 
+    box-shadow:
 
-    #countries-content h1 {
+    0 0 12px
 
-        font-size: 28px;
+    rgba(30, 130, 255, 0.35);
 
-    }
+    transform:
+
+    translateX(3px);
 
 }
+
+
+.country-dossier-button.disabled {
+
+    opacity: 0.35;
+
+    cursor: default;
+
+    pointer-events: none;
+
+}
+
 
 /* =========================
    ФЛАГ И НАЗВАНИЕ
@@ -483,6 +544,80 @@
 
 }
 
+
+/* =========================
+   АДАПТИВНОСТЬ
+========================= */
+
+@media (max-width: 1100px) {
+
+    .country-row {
+
+        grid-template-columns:
+
+        1.7fr
+        1.2fr
+        1.5fr
+        1.3fr
+        50px;
+
+        gap: 18px;
+
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .country-row {
+
+        grid-template-columns:
+
+        1fr 1fr;
+
+    }
+
+
+    .country-dossier-button {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .country-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+    }
+
+
+    #countries-content h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .country-dossier-button {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+}
+
 </style>
 
 </head>
@@ -516,6 +651,10 @@
 </div>
 
 
+<!-- =========================
+     ЗАГОЛОВОК
+========================= -->
+
 <h1>
 
 Центральная база данных государств
@@ -533,7 +672,7 @@
 
 <!-- =========================
      СПИСОК ГОСУДАРСТВ
-     
+
      Государства автоматически
      загружаются через countries.js
 ========================= -->
@@ -550,7 +689,6 @@ id="countries-list"
 
 
 </div>
-
 
 
 <!-- =========================
