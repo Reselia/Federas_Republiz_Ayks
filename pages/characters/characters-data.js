@@ -31,6 +31,23 @@ const characters = [
     flag: "../media/images/federation_flat_v4_no_folds.png",
 
     profile: "constancia.html"
-}
+},
+
+{
+        id: "ИБН-M-001",
+
+        name: "АУРЕЛИЯ ЭВЕРГРЕЙС НОКТИРИЭЛЬ",
+
+        position: "Императрица Империи Белой Ночи",
+
+        affiliation: "Империя Белой Ночи",
+
+        photo: "../media/images/characters/aurelia.png",
+
+        flag: "",
+
+         profile: "aurelia.html"
+
+    }
 
 ];
