@@ -207,40 +207,40 @@ countries.forEach(country => {
     tensionBlock.appendChild(tensionBar);
 
 
-    /* =========================
-       КНОПКА ПОЛНОГО ДОСЬЕ
-    ========================= */
+/* =========================
+   КНОПКА ПОЛНОГО ДОСЬЕ
+========================= */
 
-    const dossierButton = document.createElement("div");
-
-
-    dossierButton.className = "country-dossier-button";
+const dossierButton = document.createElement("div");
 
 
-    dossierButton.innerHTML = "→";
+dossierButton.className = "country-dossier-button";
 
 
-    dossierButton.title = "Открыть полное досье";
+dossierButton.innerHTML = "→";
 
 
-    /* =========================
-       ПЕРЕХОД В ПОЛНОЕ ДОСЬЕ
-    ========================= */
-
-    dossierButton.addEventListener("click", event => {
-
-        event.preventDefault();
-
-        event.stopPropagation();
+dossierButton.title = "Открыть полное досье";
 
 
-        if (country.profile) {
+/* =========================
+   ПЕРЕХОД В ПОЛНОЕ ДОСЬЕ
+========================= */
 
-            window.location.href = country.profile;
+dossierButton.addEventListener("click", event => {
 
-        }
+    event.preventDefault();
 
-    });
+    event.stopPropagation();
+
+
+    if (country.profile) {
+
+        window.location.href = country.profile;
+
+    }
+
+});
 
 
     /* =========================
