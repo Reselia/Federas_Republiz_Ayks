@@ -1,58 +1,750 @@
 <!DOCTYPE html>
+
 <html lang="ru">
 
 <head>
 
 <meta charset="UTF-8">
 
-<title>Реселия Рэй Кристалия | Персонажи</title>
+<title>Досье | Реселия Рэй Кристалия</title>
 
 <link rel="icon" type="image/x-icon" href="../../favicon.ico">
 
 <link rel="stylesheet" href="../../style.css">
 
-</head>
+<style>
 
+/* =========================
+   ДОСЬЕ ПЕРСОНАЖА
+========================= */
+
+#character-dossier {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================
+   НАВИГАЦИЯ
+========================= */
+
+.dossier-navigation {
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 30px;
+
+}
+
+
+.dossier-navigation a {
+
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border:
+
+    1px solid
+    rgba(45, 140, 255, 0.7);
+
+    border-radius: 8px;
+
+    background:
+
+    rgba(20, 50, 95, 0.45);
+
+    color:
+
+    rgba(150, 210, 255, 0.95);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+
+    transition: 0.25s ease;
+
+}
+
+
+.dossier-navigation a:hover {
+
+    background:
+
+    rgba(35, 100, 180, 0.5);
+
+    border-color:
+
+    rgba(90, 180, 255, 1);
+
+    box-shadow:
+
+    0 0 12px
+    rgba(30, 130, 255, 0.25);
+
+}
+
+
+/* =========================
+   ЗАГОЛОВОК
+========================= */
+
+#character-dossier h1 {
+
+    font-size: 32px;
+
+    line-height: 1.3;
+
+    margin-bottom: 35px;
+
+    color:
+
+    rgba(220, 240, 255, 0.98);
+
+}
+
+
+/* =========================
+   РАЗДЕЛЫ
+========================= */
+
+.dossier-section {
+
+    margin-bottom: 35px;
+
+    padding: 24px;
+
+    background:
+
+    linear-gradient(
+
+        145deg,
+
+        rgba(20, 40, 75, 0.75),
+
+        rgba(8, 18, 38, 0.85)
+
+    );
+
+    border:
+
+    1px solid
+    rgba(45, 140, 255, 0.35);
+
+    border-radius: 12px;
+
+    box-shadow:
+
+    inset 0 0 20px
+    rgba(20, 100, 200, 0.03);
+
+}
+
+
+/* =========================
+   ЗАГОЛОВКИ РАЗДЕЛОВ
+========================= */
+
+.dossier-section h2 {
+
+    font-size: 23px;
+
+    margin-top: 0;
+
+    margin-bottom: 22px;
+
+    padding-bottom: 12px;
+
+    border-bottom:
+
+    1px solid
+    rgba(70, 150, 240, 0.3);
+
+    color:
+
+    rgba(140, 205, 255, 0.95);
+
+}
+
+
+/* =========================
+   ПОДРАЗДЕЛЫ
+========================= */
+
+.dossier-section h3 {
+
+    font-size: 19px;
+
+    margin-top: 25px;
+
+    margin-bottom: 12px;
+
+    color:
+
+    rgba(180, 220, 255, 0.95);
+
+}
+
+
+/* =========================
+   СТРОКИ ОБЩИХ СВЕДЕНИЙ
+========================= */
+
+.dossier-row {
+
+    display: grid;
+
+    grid-template-columns:
+
+    220px 1fr;
+
+    gap: 20px;
+
+    padding: 9px 0;
+
+    border-bottom:
+
+    1px solid
+    rgba(70, 150, 240, 0.12);
+
+}
+
+
+.dossier-label {
+
+    color:
+
+    rgba(130, 195, 255, 0.75);
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.dossier-value {
+
+    color:
+
+    rgba(235, 245, 255, 0.95);
+
+}
+
+
+/* =========================
+   ПРИНАДЛЕЖНОСТЬ
+========================= */
+
+.dossier-affiliation {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 5px;
+
+}
+
+
+.dossier-flag {
+
+    width: 60px;
+
+    height: 38px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+
+    border:
+
+    1px solid
+    rgba(100, 180, 255, 0.6);
+
+    box-shadow:
+
+    0 0 8px
+    rgba(30, 120, 255, 0.2);
+
+}
+
+
+/* =========================
+   СПИСКИ
+========================= */
+
+.dossier-section ul {
+
+    margin-top: 10px;
+
+    padding-left: 25px;
+
+}
+
+
+.dossier-section li {
+
+    margin-bottom: 7px;
+
+}
+
+
+/* =========================
+   ОПИСАНИЕ РОДСТВЕННИКА
+========================= */
+
+.dossier-relative {
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border-left:
+
+    3px solid
+    rgba(60, 160, 255, 0.7);
+
+    background:
+
+    rgba(20, 60, 110, 0.15);
+
+    border-radius: 0 8px 8px 0;
+
+}
+
+
+.dossier-relative h3 {
+
+    margin-top: 0;
+
+}
+
+
+/* =========================
+   АДАПТИВНОСТЬ
+========================= */
+
+@media (max-width: 700px) {
+
+    #character-dossier h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .dossier-section {
+
+        padding: 18px;
+
+    }
+
+
+    .dossier-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 4px;
+
+    }
+
+
+    .dossier-label {
+
+        margin-top: 5px;
+
+    }
+
+}
+
+</style>
+
+</head>
 
 <body>
 
-
 <div class="container">
 
+<div class="content" id="character-dossier">
 
-<div class="content">
+<!-- =========================
+     НАВИГАЦИЯ
+========================= -->
 
+<div class="dossier-navigation">
 
-<h1>
-Реселия Рэй Кристалия
-</h1>
+<a href="../../archive.html">
 
+← Вернуться в главный архив
 
-<p>
-
-Тестовая страница досье персонажа.
-
-</p>
-
-
-<a href="../characters.html">
-← Вернуться к базе персонажей
 </a>
 
+<a href="../characters.html">
+
+← Вернуться в базу персонажей
+
+</a>
+
+</div>
+
+<!-- =========================
+     ЗАГОЛОВОК
+========================= -->
+
+<h1>
+
+ДОСЬЕ № AИЯ-FRA-C-001
+
+</h1>
+
+<!-- =========================
+     I. ОБЩИЕ СВЕДЕНИЯ
+========================= -->
+
+<section class="dossier-section">
+
+<h2>
+
+I. ОБЩИЕ СВЕДЕНИЯ
+
+</h2>
+
+<div class="dossier-row">
+
+<div class="dossier-label">
+Имя
+</div>
+
+<div class="dossier-value">
+Реселия Рэй Кристалия
+</div>
+
+</div>
+
+<div class="dossier-row">
+
+<div class="dossier-label">
+Вид
+</div>
+
+<div class="dossier-value">
+Человек
+</div>
+
+</div>
+
+<div class="dossier-row">
+
+<div class="dossier-label">
+Возраст
+</div>
+
+<div class="dossier-value">
+33 года по GLS
+</div>
+
+</div>
+
+<div class="dossier-row">
+
+<div class="dossier-label">
+Должность
+</div>
+
+<div class="dossier-value">
+Канцлер Федерации Республик Аякса
+</div>
+
+</div>
+
+<div class="dossier-row">
+
+<div class="dossier-label">
+Род деятельности
+</div>
+
+<div class="dossier-value">
+Государственное управление, стратегический надзор, кризисное регулирование
+</div>
+
+</div>
+
+<div class="dossier-row">
+
+<div class="dossier-label">
+Уровень допуска
+</div>
+
+<div class="dossier-value">
+Имеет наивысшие уровни доступа ко всему, что есть в Федерации.
+</div>
+
+</div>
+
+<div class="dossier-row">
+
+<div class="dossier-label">
+Принадлежность
+</div>
+
+<div class="dossier-value">
+
+<div class="dossier-affiliation">
+
+<img
+src="../../media/images/federation_flat_v4_no_folds.png"
+alt="Федерация Республик Аякса"
+class="dossier-flag"
+
+>
+
+<span>
+
+Федерация Республик Аякса
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     II. ВНЕШНИЙ ВИД
+========================= -->
+
+<section class="dossier-section">
+
+<h2>
+
+II. ВНЕШНИЙ ВИД
+
+</h2>
+
+<div class="dossier-row">
+
+<div class="dossier-label">
+Волосы
+</div>
+
+<div class="dossier-value">
+Короткие, насыщенно-рубиновые, аккуратно уложенные; подчёркивают уверенность и открытый взгляд.
+</div>
+
+</div>
+
+<div class="dossier-row">
+
+<div class="dossier-label">
+Глаза
+</div>
+
+<div class="dossier-value">
+Ярко-красные, выразительные, тёплые, но внимательные — отмечены как «наблюдательные» в отчётах.
+</div>
+
+</div>
+
+<div class="dossier-row">
+
+<div class="dossier-label">
+Телосложение
+</div>
+
+<div class="dossier-value">
+Стройная, аккуратная фигура, осанка прямая, военная.
+</div>
+
+</div>
+
+<div class="dossier-row">
+
+<div class="dossier-label">
+Форма
+</div>
+
+<div class="dossier-value">
+
+Официальный белый парадный мундир Канцлера, со множеством золотых деталей.
 
 <br><br>
 
+Погоны с тяжёлыми золотыми кистями.
 
-<a href="../../archive.html">
-← Вернуться в главный архив
-</a>
+<br>
 
+Золотые наплечные декоры старшего командования.
+
+<br>
+
+Красно-золотые вставки на вороте и манжетах.
+
+<br>
+
+Знак высшей власти Федерации (орден-кристал), расположенный на груди.
 
 </div>
 
+</div>
+
+<div class="dossier-row">
+
+<div class="dossier-label">
+Выражение лица
+</div>
+
+<div class="dossier-value">
+Спокойное, мягкое, располагающее; лёгкая улыбка — отмечена как «стабилизирующий фактор при дипломатических переговорах».
+</div>
 
 </div>
 
+</section>
+
+<!-- =========================
+     III. ЛИЧНОСТНЫЙ ПРОФИЛЬ
+========================= -->
+
+<section class="dossier-section">
+
+<h2>
+
+III. ЛИЧНОСТНЫЙ ПРОФИЛЬ
+
+</h2>
+
+<ul>
+
+<li>Добрая</li>
+
+<li>Ответственная</li>
+
+<li>Скромная</li>
+
+<li>Эмпатичная</li>
+
+<li>Способна к самоконтролю</li>
+
+<li>Легко адаптируется к эмоциональному состоянию окружающих</li>
+
+<li>Цундерка в какой-то степени</li>
+
+<li>Склонность к внутренней изоляции</li>
+
+<li>Трудность в делегировании задач — предпочитает контролировать процессы сама</li>
+
+<li>Высокая стрессоустойчивость</li>
+
+<li>Пониженная агрессивность, но высокая решительность</li>
+
+</ul>
+
+</section>
+
+<!-- =========================
+     IV. КОМПЕТЕНЦИИ
+========================= -->
+
+<section class="dossier-section">
+
+<h2>
+
+IV. КОМПЕТЕНЦИИ
+
+</h2>
+
+<ul>
+
+<li>
+<strong>Оружейная подготовка:</strong>
+эксперт. Владеет огнестрельными, энергетическими и экспериментальными системами вооружения.
+</li>
+
+<li>
+<strong>Инженерная подготовка:</strong>
+способна проводить диагностику и ремонт сложной техники.
+</li>
+
+<li>
+<strong>Класс дипломатии:</strong>
+высокий.
+</li>
+
+<li>
+<strong>Аналитика:</strong>
+превосходно обрабатывает стратегические данные.
+</li>
+
+<li>
+<strong>Лидерство:</strong>
+доказанная способность управлять крупными политическими и военными структурами.
+</li>
+
+</ul>
+
+</section>
+
+<!-- =========================
+     V. РОДСТВЕННИКИ
+========================= -->
+
+<section class="dossier-section">
+
+<h2>
+
+V. РОДСТВЕННИКИ
+
+</h2>
+
+<div class="dossier-relative">
+
+<h3>
+
+Констанция Грейл <small>
+(приёмная младшая сестра) </small>
+
+</h3>
+
+<p>
+
+Констанция Грейл — единственный человек, с которым Канцлер может вести себя неформально, проявляя эмоции и доверие, недоступное в обычных служебных взаимодействиях. Их связь носит исключительно личный и эмоциональный характер: она формировалась вне структур ФРА, не основана на политике или служебной необходимости, и представляет собой редкий случай эмоционального резонанса для высшего руководства Федерации.
+
+</p>
+
+<p>
+
+Контакт с Констанцией стабилизирует психологическое состояние Канцлера, снижает уровень напряжения, позволяет проявлять открытость и доверие, а также формирует ощущение семейного единства и поддержки. Констанция оказывает значительное влияние на эмоциональное состояние Канцлера, выступая как мягкий стабилизирующий фактор, который помогает сохранять баланс между личной жизнью и высокими должностными обязанностями.
+
+</p>
+
+<p>
+
+Факт родства официально представлен в Республике Эрис как дальнее родство, что обеспечивает формальную корректность и социальную репутацию Констанции. При этом реальная степень близости известна только ограниченному кругу доверенных лиц. Связь зарегистрирована, но не подлежит публичному раскрытию; не рассматривается как угроза безопасности и классифицируется как неформальный стабилизирующий фактор высшего уровня управления.
+
+</p>
+
+</div>
+
+</section>
+
+</div>
+
+</div>
 
 </body>
 
