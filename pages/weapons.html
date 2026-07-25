@@ -2,59 +2,63 @@
 <html lang="ru">
 
 <head>
+
 <meta charset="UTF-8">
 
-<title>Вооружение</title>
+<title>Вооружение | Федерация Республик Аякса</title>
+
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
 
 <link rel="stylesheet" href="../style.css">
 
 </head>
 
+
 <body>
+
 
 <div class="container">
 
 
 <div class="sidebar">
 
+
 <h2>🔫 Вооружение</h2>
+
 
 <a href="../archive.html">
 Главная
 </a>
 
+
 <hr>
 
-<a href="#" onclick="loadWeaponFile('weapon-concept.html')">
-Концепция вооружения
+
+<a href="#" onclick="loadPage('weapon-concept.html')">
+Основная концепция вооружения
 </a>
 
-<a href="#" onclick="loadWeaponFile('weapon-classification.html')">
+
+<a href="#" onclick="loadPage('weapon-classification.html')">
 Классификация вооружения
 </a>
 
-<a href="#" onclick="loadWeaponFile('fleet-classification.html')">
+
+<a href="#" onclick="loadPage('fleet-classification.html')">
 Флот и корабли ФРА
 </a>
 
-<a href="#" onclick="loadWeaponFile('orbital-systems.html')">
-Орбитальные системы
+
+<a href="#" onclick="loadPage('orbital-systems.html')">
+Орбитальные системы ФРА
 </a>
+
 
 </div>
 
 
-<div class="content" id="weapon-content">
+<div class="content" id="weapons-content">
 
-<h1>Вооружение</h1>
-
-<p>
-Архив вооружения и военных технологий Федерации.
-</p>
-
-<p>
-Выберите раздел в меню слева.
-</p>
 
 </div>
 
@@ -64,41 +68,84 @@
 
 <script>
 
-function loadWeaponFile(file) {
 
-fetch(`weapons/${file}`)
+function loadPage(page){
+
+
+fetch("weapons/" + page)
+
 
 .then(response => {
 
-if (!response.ok) {
-throw new Error("Ошибка загрузки файла");
+
+if(!response.ok){
+
+throw new Error("Ошибка загрузки");
+
 }
+
 
 return response.text();
 
+
 })
+
 
 .then(data => {
 
-document.getElementById("weapon-content").innerHTML = data;
+
+document.getElementById("weapons-content").innerHTML = data;
+
+
+let titles = {
+
+
+"weapon-concept.html":
+"Вооружение | Основная концепция",
+
+
+"weapon-classification.html":
+"Вооружение | Классификация вооружения",
+
+
+"fleet-classification.html":
+"Вооружение | Флот и корабли ФРА",
+
+
+"orbital-systems.html":
+"Вооружение | Орбитальные системы ФРА"
+
+
+};
+
+
+document.title =
+titles[page] ||
+"Вооружение | Федерация Республик Аякса";
+
 
 })
 
+
 .catch(error => {
 
-document.getElementById("weapon-content").innerHTML =
 
-"<h1>Ошибка</h1>" +
+document.getElementById("weapons-content").innerHTML =
 
-"<p>Не удалось загрузить данный раздел.</p>";
+"<h2>Ошибка загрузки данных</h2>";
 
-console.error(error);
 
 });
 
+
 }
 
+
+loadPage("weapon-concept.html");
+
+
 </script>
+
 
 </body>
 
