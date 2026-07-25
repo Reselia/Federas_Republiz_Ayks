@@ -9,9 +9,9 @@ const characters = [
 
         affiliation: "Федерация Республик Аякса",
 
-        photo: "../../media/images/characters/reselia.png",
+        photo: "../media/images/characters/reselia.png",
 
-        flag: "../../media/images/federation_flat_v4_no_folds.png",
+        flag: "../media/images/federation_flat_v4_no_folds.png",
 
         profile: "reselia.html"
 
