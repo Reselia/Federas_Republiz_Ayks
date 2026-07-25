@@ -36,39 +36,39 @@ countries.forEach(country => {
     const nameBlock = document.createElement("div");
 
 
-nameBlock.innerHTML = `
+    nameBlock.innerHTML = `
 
-    <div class="country-name-container">
+        <div class="country-name-container">
 
-        ${
-            country.flag
-            ? `<img
-                src="${country.flag}"
-                alt="${country.name}"
-                class="country-flag"
-            >`
-            : ""
-        }
+            ${
+                country.flag
+                ? `<img
+                    src="${country.flag}"
+                    alt="${country.name}"
+                    class="country-flag"
+                >`
+                : ""
+            }
 
-        <div>
+            <div>
 
-            <div class="country-name">
+                <div class="country-name">
 
-                ${country.name}
+                    ${country.name}
 
-            </div>
+                </div>
 
-            <div class="country-id">
+                <div class="country-id">
 
-                ID: ${country.id}
+                    ID: ${country.id}
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
-
-`;
+    `;
 
 
     /* =========================
@@ -119,9 +119,11 @@ nameBlock.innerHTML = `
             : "embassy-no"
         }">
 
-            ${country.embassyFRA
-            ? "● Посольство ФРА: имеется"
-            : "● Посольство ФРА: отсутствует"}
+            ${
+                country.embassyFRA
+                ? "● Посольство ФРА: имеется"
+                : "● Посольство ФРА: отсутствует"
+            }
 
         </span>
 
@@ -132,9 +134,11 @@ nameBlock.innerHTML = `
             : "embassy-no"
         }">
 
-            ${country.embassyCountry
-            ? "● Посольство государства: имеется"
-            : "● Посольство государства: отсутствует"}
+            ${
+                country.embassyCountry
+                ? "● Посольство государства: имеется"
+                : "● Посольство государства: отсутствует"
+            }
 
         </span>
 
@@ -204,6 +208,42 @@ nameBlock.innerHTML = `
 
 
     /* =========================
+       КНОПКА ПОЛНОГО ДОСЬЕ
+    ========================= */
+
+    const dossierButton = document.createElement("div");
+
+
+    dossierButton.className = "country-dossier-button";
+
+
+    dossierButton.innerHTML = "→";
+
+
+    dossierButton.title = "Открыть полное досье";
+
+
+    /* =========================
+       ПЕРЕХОД В ПОЛНОЕ ДОСЬЕ
+    ========================= */
+
+    dossierButton.addEventListener("click", event => {
+
+        event.preventDefault();
+
+        event.stopPropagation();
+
+
+        if (country.profile) {
+
+            window.location.href = country.profile;
+
+        }
+
+    });
+
+
+    /* =========================
        ДОБАВЛЕНИЕ В СТРОКУ
     ========================= */
 
@@ -214,6 +254,8 @@ nameBlock.innerHTML = `
     row.appendChild(embassyBlock);
 
     row.appendChild(tensionBlock);
+
+    row.appendChild(dossierButton);
 
 
     /* =========================
