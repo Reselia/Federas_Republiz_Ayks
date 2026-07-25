@@ -11,7 +11,7 @@ const countries = [
 
         embassyCountry: true,
 
-        tension: 7,
+        tension: 8,
 
         relations: "Напряжённые, но без состояния войны",
 
