@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ru">
 
 <head>
@@ -11,7 +12,6 @@
 
 <link rel="stylesheet" href="../style.css">
 
-
 <style>
 
 /* =========================
@@ -23,6 +23,64 @@
     font-size: 18px;
 
     line-height: 1.7;
+
+}
+
+
+/* =========================
+   НАВИГАЦИЯ
+========================= */
+
+.characters-navigation {
+
+    margin-bottom: 30px;
+
+}
+
+
+.characters-back-link {
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: rgba(130, 200, 255, 0.9);
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+
+    padding: 9px 16px;
+
+    border: 1px solid rgba(45, 140, 255, 0.5);
+
+    border-radius: 7px;
+
+    background: rgba(20, 50, 90, 0.35);
+
+    transition:
+
+    background 0.25s ease,
+
+    border-color 0.25s ease,
+
+    box-shadow 0.25s ease;
+
+}
+
+
+.characters-back-link:hover {
+
+    color: #ffffff;
+
+    background: rgba(30, 90, 160, 0.45);
+
+    border-color: rgba(80, 170, 255, 0.9);
+
+    box-shadow:
+
+    0 0 12px
+    rgba(30, 130, 255, 0.25);
 
 }
 
@@ -438,53 +496,37 @@
 
 </head>
 
-
 <body>
-
-
-<div class="container">
-
-
-<!-- =========================
-     БОКОВОЕ МЕНЮ
-========================= -->
-
-<div class="sidebar">
-
-
-<h2>
-👤 Персонажи
-</h2>
-
-
-<a href="../archive.html">
-Главная
-</a>
-
-
-<hr>
-
-
-<a href="#">
-База персонажей
-</a>
-
-
-</div>
-
-
-
-<!-- =========================
-     ОСНОВНОЕ СОДЕРЖИМОЕ
-========================= -->
 
 <div class="content" id="characters-content">
 
+<!-- =========================
+     НАВИГАЦИЯ
+========================= -->
+
+<div class="characters-navigation">
+
+<a
+href="../archive.html"
+class="characters-back-link"
+
+>
+
+← Вернуться в главный архив
+
+</a>
+
+</div>
+
+<!-- =========================
+     ЗАГОЛОВОК
+========================= -->
 
 <h1>
-База данных персоналий
-</h1>
 
+База данных персоналий
+
+</h1>
 
 <p class="characters-description">
 
@@ -492,8 +534,6 @@
 связанных с историей и событиями вселенной.
 
 </p>
-
-
 
 <!-- =========================
      КАРТОЧКИ ПЕРСОНАЖЕЙ
@@ -509,13 +549,7 @@ id="characters-grid"
 
 </div>
 
-
 </div>
-
-
-</div>
-
-
 
 <!-- =========================
      ДАННЫЕ ПЕРСОНАЖЕЙ
@@ -523,13 +557,11 @@ id="characters-grid"
 
 <script src="characters/characters-data.js"></script>
 
-
 <!-- =========================
      СОЗДАНИЕ КАРТОЧЕК
 ========================= -->
 
 <script src="characters/characters.js"></script>
-
 
 </body>
 
