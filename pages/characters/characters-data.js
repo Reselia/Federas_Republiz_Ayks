@@ -15,7 +15,7 @@ const characters = [
 
         profile: "reselia.html"
 
-    }
+    },
 
     {
     id: "FRA-C-002",
@@ -30,7 +30,7 @@ const characters = [
 
     flag: "../media/images/federation_flat_v4_no_folds.png",
 
-    dossier: "characters/constancia.html"
+    profile: "characters/constancia.html"
 }
 
 ];
