@@ -5,15 +5,15 @@ const countries = [
 
         name: "Империя Белой Ночи",
 
-        distance: "Не указано",
+        distance: "810000 ✝",
 
-        embassyFRA: false,
+        embassyFRA: true,
 
-        embassyCountry: false,
+        embassyCountry: true,
 
-        tension: 5,
+        tension: 7,
 
-        relations: "Стабильные",
+        relations: "Напряжённые, но без состояния войны",
 
         /*
         Путь к флагу.
