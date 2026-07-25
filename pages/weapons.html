@@ -3,13 +3,17 @@
 
 <head>
 <meta charset="UTF-8">
+
 <title>Вооружение</title>
+
 <link rel="stylesheet" href="../style.css">
+
 </head>
 
 <body>
 
 <div class="container">
+
 
 <div class="sidebar">
 
@@ -18,16 +22,29 @@
 <a href="../archive.html">
 Главная
 </a>
+
 <hr>
 
-<a href="#">Концепция вооружения</a>
-<a href="#">Классификация оружия</a>
-<a href="#">Флот Федерации</a>
-<a href="#">Межмировые орбитальные системы</a>
+<a href="#" onclick="loadWeaponFile('weapon-concept.html')">
+Концепция вооружения
+</a>
+
+<a href="#" onclick="loadWeaponFile('weapon-classification.html')">
+Классификация вооружения
+</a>
+
+<a href="#" onclick="loadWeaponFile('fleet-classification.html')">
+Флот и корабли ФРА
+</a>
+
+<a href="#" onclick="loadWeaponFile('orbital-systems.html')">
+Орбитальные системы
+</a>
 
 </div>
 
-<div class="content">
+
+<div class="content" id="weapon-content">
 
 <h1>Вооружение</h1>
 
@@ -35,9 +52,53 @@
 Архив вооружения и военных технологий Федерации.
 </p>
 
-</div>
+<p>
+Выберите раздел в меню слева.
+</p>
 
 </div>
+
+
+</div>
+
+
+<script>
+
+function loadWeaponFile(file) {
+
+fetch(`weapons/${file}`)
+
+.then(response => {
+
+if (!response.ok) {
+throw new Error("Ошибка загрузки файла");
+}
+
+return response.text();
+
+})
+
+.then(data => {
+
+document.getElementById("weapon-content").innerHTML = data;
+
+})
+
+.catch(error => {
+
+document.getElementById("weapon-content").innerHTML =
+
+"<h1>Ошибка</h1>" +
+
+"<p>Не удалось загрузить данный раздел.</p>";
+
+console.error(error);
+
+});
+
+}
+
+</script>
 
 </body>
 
