@@ -20,7 +20,7 @@ const countries = [
         Пока флаг не добавлен — оставить пустым.
         */
 
-        flag: "",
+        flag: "../media/images/flags/white_night_empire.png",
 
         /*
         Путь к полному досье государства.
