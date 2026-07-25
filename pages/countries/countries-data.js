@@ -27,7 +27,7 @@ const countries = [
         Пока страница не создана — оставить пустым.
         */
 
-        profile: "white-night-empire.html"
+        profile: "countries/white-night-empire.html"
 
     }
 
