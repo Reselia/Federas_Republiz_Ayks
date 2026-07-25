@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Досье | Империя Белой Ночи</title>
+
+<link rel="icon" type="image/x-icon" href="../../favicon.ico">
+
+<link rel="stylesheet" href="../../style.css">
+
+<style>
+
+/* =========================
+   ДОСЬЕ ГОСУДАРСТВА
+========================= */
+
+#country-dossier {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================
+   НАВИГАЦИЯ
+========================= */
+
+.dossier-navigation {
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 30px;
+
+}
+
+
+.dossier-navigation a {
+
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border:
+    1px solid
+    rgba(45, 140, 255, 0.7);
+
+    border-radius: 8px;
+
+    background:
+    rgba(20, 50, 95, 0.45);
+
+    color:
+    rgba(150, 210, 255, 0.95);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+
+    transition: 0.25s ease;
+
+}
+
+
+.dossier-navigation a:hover {
+
+    background:
+    rgba(35, 100, 180, 0.5);
+
+    border-color:
+    rgba(90, 180, 255, 1);
+
+    box-shadow:
+    0 0 12px
+    rgba(30, 130, 255, 0.25);
+
+}
+
+
+/* =========================
+   ЗАГОЛОВОК
+========================= */
+
+#country-dossier h1 {
+
+    font-size: 32px;
+
+    line-height: 1.3;
+
+    margin-bottom: 35px;
+
+    color:
+    rgba(220, 240, 255, 0.98);
+
+}
+
+
+/* =========================
+   ГЕРБ ГОСУДАРСТВА
+========================= */
+
+.country-dossier-emblem {
+
+    display: block;
+
+    width: 150px;
+
+    height: 150px;
+
+    object-fit: contain;
+
+    margin: 0 auto 35px auto;
+
+    filter:
+    drop-shadow(
+        0 0 10px
+        rgba(80, 170, 255, 0.25)
+    );
+
+}
+
+
+/* =========================
+   РАЗДЕЛЫ
+========================= */
+
+.dossier-section {
+
+    margin-bottom: 35px;
+
+    padding: 24px;
+
+    background:
+
+    linear-gradient(
+
+        145deg,
+
+        rgba(20, 40, 75, 0.75),
+
+        rgba(8, 18, 38, 0.85)
+
+    );
+
+    border:
+
+    1px solid
+    rgba(45, 140, 255, 0.35);
+
+    border-radius: 12px;
+
+    box-shadow:
+
+    inset 0 0 20px
+    rgba(20, 100, 200, 0.03);
+
+}
+
+
+/* =========================
+   ЗАГОЛОВКИ РАЗДЕЛОВ
+========================= */
+
+.dossier-section h2 {
+
+    font-size: 23px;
+
+    margin-top: 0;
+
+    margin-bottom: 22px;
+
+    padding-bottom: 12px;
+
+    border-bottom:
+
+    1px solid
+    rgba(70, 150, 240, 0.3);
+
+    color:
+
+    rgba(140, 205, 255, 0.95);
+
+}
+
+
+/* =========================
+   ПОДРАЗДЕЛЫ
+========================= */
+
+.dossier-section h3 {
+
+    font-size: 19px;
+
+    margin-top: 25px;
+
+    margin-bottom: 12px;
+
+    color:
+
+    rgba(180, 220, 255, 0.95);
+
+}
+
+
+/* =========================
+   СТРОКИ ОБЩИХ СВЕДЕНИЙ
+========================= */
+
+.dossier-row {
+
+    display: grid;
+
+    grid-template-columns:
+
+    220px 1fr;
+
+    gap: 20px;
+
+    padding: 9px 0;
+
+    border-bottom:
+
+    1px solid
+    rgba(70, 150, 240, 0.12);
+
+}
+
+
+.dossier-label {
+
+    color:
+
+    rgba(130, 195, 255, 0.75);
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.dossier-value {
+
+    color:
+
+    rgba(235, 245, 255, 0.95);
+
+}
+
+
+/* =========================
+   ПРИНАДЛЕЖНОСТЬ
+========================= */
+
+.dossier-affiliation {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 5px;
+
+}
+
+
+.dossier-flag {
+
+    width: 60px;
+
+    height: 38px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+
+    border:
+
+    1px solid
+    rgba(100, 180, 255, 0.6);
+
+    box-shadow:
+
+    0 0 8px
+    rgba(30, 120, 255, 0.2);
+
+}
+
+
+/* =========================
+   СПИСКИ
+========================= */
+
+.dossier-section ul {
+
+    margin-top: 10px;
+
+    padding-left: 25px;
+
+}
+
+
+.dossier-section li {
+
+    margin-bottom: 7px;
+
+}
+
+
+/* =========================
+   КАРТОЧКА ДАННЫХ МИРА
+========================= */
+
+.world-data {
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border-left:
+
+    3px solid
+    rgba(60, 160, 255, 0.7);
+
+    background:
+
+    rgba(20, 60, 110, 0.15);
+
+    border-radius: 0 8px 8px 0;
+
+}
+
+
+/* =========================
+   КОД ХАРАКТЕРИСТИК
+========================= */
+
+.characteristic-code {
+
+    margin-top: 20px;
+
+    padding: 16px 20px;
+
+    background:
+
+    rgba(10, 30, 60, 0.45);
+
+    border:
+
+    1px solid
+    rgba(70, 150, 240, 0.25);
+
+    border-radius: 8px;
+
+    font-family:
+
+    monospace;
+
+    color:
+
+    rgba(180, 220, 255, 0.95);
+
+    word-break: break-word;
+
+}
+
+
+/* =========================
+   АДАПТИВНОСТЬ
+========================= */
+
+@media (max-width: 700px) {
+
+    #country-dossier h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .dossier-section {
+
+        padding: 18px;
+
+    }
+
+
+    .dossier-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 4px;
+
+    }
+
+
+    .dossier-label {
+
+        margin-top: 5px;
+
+    }
+
+
+    .country-dossier-emblem {
+
+        width: 120px;
+
+        height: 120px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="content" id="country-dossier">
+
+
+<!-- =========================
+     НАВИГАЦИЯ
+========================= -->
+
+<div class="dossier-navigation">
+
+
+<a href="../../archive.html">
+
+← Вернуться в главный архив
+
+</a>
+
+
+<a href="../countries.html">
+
+← Вернуться в базу государств
+
+</a>
+
+
+</div>
+
+
+<!-- =========================
+     ГЕРБ
+========================= -->
+
+<img
+
+src="../../media/images/emblems/white_night_empire.png"
+
+alt="Герб Империи Белой Ночи"
+
+class="country-dossier-emblem"
+
+>
+
+
+<!-- =========================
+     ЗАГОЛОВОК
+========================= -->
+
+<h1>
+
+ДОСЬЕ № АИЯ-ИБН-M-001
+
+</h1>
+
+
+<!-- =========================
+     I. ОБЩИЕ СВЕДЕНИЯ
+========================= -->
+
+<section class="dossier-section">
+
+
+<h2>
+
+I. ОБЩИЕ СВЕДЕНИЯ
+
+</h2>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Название
+
+</div>
+
+
+<div class="dossier-value">
+
+Империя Белой Ночи
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Лидер
+
+</div>
+
+
+<div class="dossier-value">
+
+Аурелия Эвергрейс Ноктириэль
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Статус
+
+</div>
+
+
+<div class="dossier-value">
+
+Суверенная межмировая империя и геополитический соперник Федерации
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Местоположение
+
+</div>
+
+
+<div class="dossier-value">
+
+Множество миров и субмиров, объединённых под властью Императорского Дома Ноктириэль
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Столица
+
+</div>
+
+
+<div class="dossier-value">
+
+Люминарис
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Население
+
+</div>
+
+
+<div class="dossier-value">
+
+Около 87 млрд человек
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Язык
+
+</div>
+
+
+<div class="dossier-value">
+
+Высокий Имперский, региональные диалекты и академические наречия
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Форма правления
+
+</div>
+
+
+<div class="dossier-value">
+
+Абсолютная монархия
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Принадлежность
+
+</div>
+
+
+<div class="dossier-value">
+
+
+<div class="dossier-affiliation">
+
+
+<img
+
+src="../../media/images/flags/white_night_empire.png"
+
+alt="Флаг Империи Белой Ночи"
+
+class="dossier-flag"
+
+>
+
+
+<span>
+
+Империя Белой Ночи
+
+</span>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+<!-- =========================
+     ОПИСАНИЕ ГОСУДАРСТВА
+========================= -->
+
+<section class="dossier-section">
+
+
+<h2>
+
+ОПИСАНИЕ ГОСУДАРСТВА
+
+</h2>
+
+
+<p>
+
+Империя Белой Ночи — одна из крупнейших и наиболее влиятельных держав известных миров. Государство основано на сочетании древних традиций, абсолютной власти Императорского Дома и развитой магической науки. Несмотря на внешнее сходство со средневековыми государствами, Империя располагает возможностями, сопоставимыми с крупнейшими технологическими державами.
+
+</p>
+
+
+<p>
+
+Основой могущества государства являются Великие Дома, Магические Академии и Имперский Арканный Флот.
+
+</p>
+
+
+</section>
+
+
+<!-- =========================
+     II. ПРАВИТЕЛЬСТВО
+========================= -->
+
+<section class="dossier-section">
+
+
+<h2>
+
+II. ПРАВИТЕЛЬСТВО
+
+</h2>
+
+
+<h3>
+
+Императорский Дом Ноктириэль
+
+</h3>
+
+
+<p>
+
+Императорский Дом Ноктириэль — верховный правящий орган Империи Белой Ночи.
+
+</p>
+
+
+<ul>
+
+
+<li>
+
+Императрица обладает абсолютной властью над всеми территориями Империи.
+
+</li>
+
+
+<li>
+
+Все Великие Дома приносят клятву верности Императорскому Дому.
+
+</li>
+
+
+<li>
+
+Императрица обладает правом отменять любые решения органов власти.
+
+</li>
+
+
+<li>
+
+Руководство вооружёнными силами осуществляется непосредственно от имени Императорского Трона.
+
+</li>
+
+
+<li>
+
+Академии обязаны предоставлять результаты наиболее важных исследований Императорской Канцелярии.
+
+</li>
+
+
+</ul>
+
+
+<p>
+
+Императорский Дом считается не только политическим, но и духовным символом единства Империи.
+
+</p>
+
+
+</section>
+
+
+<!-- =========================
+     III. ПОЛИТИЧЕСКОЕ УСТРОЙСТВО
+========================= -->
+
+<section class="dossier-section">
+
+
+<h2>
+
+III. ПОЛИТИЧЕСКОЕ УСТРОЙСТВО
+
+</h2>
+
+
+<h3>
+
+Великие Дома
+
+</h3>
+
+
+<p>
+
+Наиболее влиятельные аристократические семьи государства.
+
+</p>
+
+
+<ul>
+
+
+<li>
+
+Управляют отдельными мирами и секторами.
+
+</li>
+
+
+<li>
+
+Содержат собственные армии и флоты.
+
+</li>
+
+
+<li>
+
+Финансируют академии и исследовательские проекты.
+
+</li>
+
+
+<li>
+
+Представляют интересы регионов при Императорском Дворе.
+
+</li>
+
+
+</ul>
+
+
+<h3>
+
+Имперский Совет Домов
+
+</h3>
+
+
+<p>
+
+Высший совещательный орган Империи.
+
+</p>
+
+
+<p>
+
+Включает представителей Великих Домов, Архимагов и Императорской Канцелярии.
+
+</p>
+
+
+<h3>
+
+Магические Академии
+
+</h3>
+
+
+<p>
+
+Являются аналогом научно-исследовательских институтов.
+
+</p>
+
+
+<p>
+
+Осуществляют:
+
+</p>
+
+
+<ul>
+
+
+<li>
+
+подготовку магов;
+
+</li>
+
+
+<li>
+
+исследование арканных явлений;
+
+</li>
+
+
+<li>
+
+разработку новых заклинаний;
+
+</li>
+
+
+<li>
+
+изучение межмировых структур;
+
+</li>
+
+
+<li>
+
+создание магических артефактов.
+
+</li>
+
+
+</ul>
+
+
+<h3>
+
+Императорская Канцелярия
+
+</h3>
+
+
+<p>
+
+Обеспечивает управление государственным аппаратом и исполнение указов Императрицы.
+
+</p>
+
+
+</section>
+
+
+<!-- =========================
+     IV. КУЛЬТУРА И ОБЩЕСТВЕННАЯ ЖИЗНЬ
+========================= -->
+
+<section class="dossier-section">
+
+
+<h2>
+
+IV. КУЛЬТУРА И ОБЩЕСТВЕННАЯ ЖИЗНЬ
+
+</h2>
+
+
+<p>
+
+Культура Империи построена вокруг понятий долга, чести, служения и магического наследия.
+
+</p>
+
+
+<p>
+
+Население условно разделено на:
+
+</p>
+
+
+<ul>
+
+
+<li>
+
+Императорский Дом;
+
+</li>
+
+
+<li>
+
+Великие Дома;
+
+</li>
+
+
+<li>
+
+дворянство;
+
+</li>
+
+
+<li>
+
+магическую элиту;
+
+</li>
+
+
+<li>
+
+свободных граждан;
+
+</li>
+
+
+<li>
+
+ремесленников и рабочих.
+
+</li>
+
+
+</ul>
+
+
+<p>
+
+Особое положение занимают выпускники Академий, которые могут получить дворянский статус за выдающиеся достижения.
+
+</p>
+
+
+<p>
+
+Основными культурными ценностями являются:
+
+</p>
+
+
+<ul>
+
+
+<li>
+
+уважение к традициям;
+
+</li>
+
+
+<li>
+
+верность клятвам;
+
+</li>
+
+
+<li>
+
+развитие магических искусств;
+
+</li>
+
+
+<li>
+
+служение Империи.
+
+</li>
+
+
+</ul>
+
+
+<p>
+
+Праздники государства часто связаны с историческими победами, основаниями Академий и важнейшими событиями Императорского Дома.
+
+</p>
+
+
+</section>
+
+
+<!-- =========================
+     V. ОТНОШЕНИЕ К МИРУ
+========================= -->
+
+<section class="dossier-section">
+
+
+<h2>
+
+V. ОТНОШЕНИЕ К МИРУ
+
+</h2>
+
+
+<p>
+
+Империя Белой Ночи рассматривает магию как фундаментальную основу развития цивилизации.
+
+</p>
+
+
+<p>
+
+Внешняя политика строится на защите собственных интересов, поддержании баланса сил и расширении влияния Империи.
+
+</p>
+
+
+<p>
+
+Основным геополитическим соперником является Федерация Республик Аякса.
+
+</p>
+
+
+<p>
+
+Несмотря на регулярные кризисы и периоды напряжённости, между двумя державами сохраняются дипломатические отношения.
+
+</p>
+
+
+<p>
+
+Империя активно участвует в исследовании новых миров, изучении аномалий и борьбе с угрозами межмирового масштаба.
+
+</p>
+
+
+</section>
+
+
+<!-- =========================
+     VI. КАРТА МС
+========================= -->
+
+<section class="dossier-section">
+
+
+<h2>
+
+VI. КАРТА МС
+
+</h2>
+
+
+<div class="world-data">
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Название мира/субмира
+
+</div>
+
+
+<div class="dossier-value">
+
+Noctis Magna
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Тип
+
+</div>
+
+
+<div class="dossier-value">
+
+Мир
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Код
+
+</div>
+
+
+<div class="dossier-value">
+
+W-017
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Основание
+
+</div>
+
+
+<div class="dossier-value">
+
+Разветвление магических миров №2
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Квадрант
+
+</div>
+
+
+<div class="dossier-value">
+
+Н-08
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Сектор
+
+</div>
+
+
+<div class="dossier-value">
+
+102
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Статус территории
+
+</div>
+
+
+<div class="dossier-value">
+
+Имперская Метрополия
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Приоритет
+
+</div>
+
+
+<div class="dossier-value">
+
+А
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Расстояние
+
+</div>
+
+
+<div class="dossier-value">
+
+810000 ✝
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Уровень контроля (LUA)
+
+</div>
+
+
+<div class="dossier-value">
+
+3
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Уровень допуска (LVS)
+
+</div>
+
+
+<div class="dossier-value">
+
+2
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Полный код
+
+</div>
+
+
+<div class="dossier-value">
+
+W-Noctis_Magna 001А
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Адрес
+
+</div>
+
+
+<div class="dossier-value">
+
+Мир Основной мир Империи Белой Ночи → квадрант Н-08 → СЕКТОР-102
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+<h3>
+
+Коды характеристик
+
+</h3>
+
+
+<div class="characteristic-code">
+
+S-3A/D-3A/ST-2A/T-3/TQ-2/IM-3B/LF-3B/V-E3
+
+</div>
+
+
+<h3>
+
+Потоковая временная материя (ПВМ)
+
+</h3>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Тип ПВМ
+
+</div>
+
+
+<div class="dossier-value">
+
+ПВМ-М
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Тип мира
+
+</div>
+
+
+<div class="dossier-value">
+
+Магический ❖
+
+</div>
+
+
+</div>
+
+
+<h3>
+
+Навигационная структура
+
+</h3>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Квадрантов под контролем
+
+</div>
+
+
+<div class="dossier-value">
+
+122
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Секторов под контролем
+
+</div>
+
+
+<div class="dossier-value">
+
+15000
+
+</div>
+
+
+</div>
+
+
+<div class="dossier-row">
+
+
+<div class="dossier-label">
+
+Количество КНТО
+
+</div>
+
+
+<div class="dossier-value">
+
+240
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+<!-- =========================
+     VII. ВОЕННАЯ ДОКТРИНА
+========================= -->
+
+<section class="dossier-section">
+
+
+<h2>
+
+VII. ВОЕННАЯ ДОКТРИНА
+
+</h2>
+
+
+<p>
+
+Основу вооружённых сил составляют:
+
+</p>
+
+
+<ul>
+
+
+<li>
+
+Имперская Армия
+
+</li>
+
+
+<li>
+
+Орденские Легионы
+
+</li>
+
+
+<li>
+
+Имперская Гвардия
+
+</li>
+
+
+<li>
+
+Арканный Флот
+
+</li>
+
+
+</ul>
+
+
+<h3>
+
+Основные технологии
+
+</h3>
+
+
+<ul>
+
+
+<li>
+
+магические реакторы;
+
+</li>
+
+
+<li>
+
+рунические системы связи;
+
+</li>
+
+
+<li>
+
+артефакторные комплексы;
+
+</li>
+
+
+<li>
+
+пространственные порталы;
+
+</li>
+
+
+<li>
+
+магические щиты стратегического уровня.
+
+</li>
+
+
+</ul>
+
+
+<h3>
+
+Военная доктрина
+
+</h3>
+
+
+<p>
+
+Военная доктрина ориентирована на превосходство в магических технологиях и контроль пространственных путей между мирами.
+
+</p>
+
+
+</section>
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>
