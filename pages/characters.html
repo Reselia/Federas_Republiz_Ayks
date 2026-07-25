@@ -93,7 +93,6 @@
     );
 
     border:
-
     1px solid
     rgba(45, 140, 255, 0.8);
 
@@ -102,7 +101,6 @@
     padding: 22px;
 
     box-shadow:
-
     0 0 12px
     rgba(30, 120, 255, 0.15),
 
@@ -110,11 +108,8 @@
     rgba(20, 100, 200, 0.05);
 
     transition:
-
     transform 0.25s ease,
-
     box-shadow 0.25s ease,
-
     border-color 0.25s ease;
 
     cursor: pointer;
@@ -129,15 +124,12 @@
 .character-card:hover {
 
     transform:
-
     translateY(-4px);
 
     border-color:
-
     rgba(80, 170, 255, 1);
 
     box-shadow:
-
     0 0 20px
     rgba(30, 130, 255, 0.35),
 
@@ -160,7 +152,6 @@
     letter-spacing: 2px;
 
     color:
-
     rgba(120, 190, 255, 0.9);
 
     padding-bottom: 12px;
@@ -168,7 +159,6 @@
     margin-bottom: 18px;
 
     border-bottom:
-
     1px solid
     rgba(70, 150, 240, 0.35);
 
@@ -207,12 +197,10 @@
     border-radius: 8px;
 
     border:
-
     1px solid
     rgba(80, 170, 255, 0.6);
 
     box-shadow:
-
     0 0 10px
     rgba(30, 120, 255, 0.2);
 
@@ -245,7 +233,6 @@
     text-transform: uppercase;
 
     color:
-
     rgba(120, 190, 255, 0.7);
 
     margin-bottom: 4px;
@@ -283,7 +270,6 @@
     text-transform: uppercase;
 
     color:
-
     rgba(120, 190, 255, 0.7);
 
     margin-bottom: 4px;
@@ -324,7 +310,6 @@
     padding-top: 16px;
 
     border-top:
-
     1px solid
     rgba(70, 150, 240, 0.35);
 
@@ -348,7 +333,6 @@
     border-radius: 4px;
 
     border:
-
     1px solid
     rgba(100, 180, 255, 0.6);
 
@@ -385,7 +369,6 @@
     text-transform: uppercase;
 
     color:
-
     rgba(120, 190, 255, 0.7);
 
     margin-bottom: 3px;
@@ -406,7 +389,6 @@
     padding-top: 12px;
 
     border-top:
-
     1px solid
     rgba(70, 150, 240, 0.2);
 
@@ -415,7 +397,6 @@
     letter-spacing: 1.5px;
 
     color:
-
     rgba(130, 200, 255, 0.8);
 
 }
@@ -514,131 +495,40 @@
 
 
 
-<div class="characters-grid">
+<!-- =========================
+     КАРТОЧКИ ПЕРСОНАЖЕЙ
+     
+     Карточки автоматически
+     загружаются через characters.js
+========================= -->
+
+<div
+class="characters-grid"
+id="characters-grid"
+>
+
+</div>
+
+
+</div>
+
+
+</div>
+
 
 
 <!-- =========================
-     КАРТОЧКА РЕСЕЛИИ
+     ДАННЫЕ ПЕРСОНАЖЕЙ
 ========================= -->
 
-<a
-href="characters/reselia.html"
-class="character-card"
->
+<script src="characters/characters-data.js"></script>
 
 
-<!-- ID -->
+<!-- =========================
+     СОЗДАНИЕ КАРТОЧЕК
+========================= -->
 
-<div class="character-id">
-
-ID: FRA-C-001
-
-</div>
-
-
-
-<!-- ОСНОВНАЯ ИНФОРМАЦИЯ -->
-
-<div class="character-main">
-
-
-<img
-src="../media/images/characters/reselia.png"
-alt="Реселия Рэй Кристалия"
-class="character-photo"
->
-
-
-
-<div class="character-info">
-
-
-<div class="character-name-label">
-
-Имя
-
-</div>
-
-
-<div class="character-name">
-
-РЕСЕЛИЯ РЭЙ КРИСТАЛИЯ
-
-</div>
-
-
-<div class="character-position-label">
-
-Должность
-
-</div>
-
-
-<div class="character-position">
-
-Канцлер
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-<!-- ПРИНАДЛЕЖНОСТЬ -->
-
-<div class="character-affiliation">
-
-
-<img
-src="../media/images/federation_flat_v4_no_folds.png"
-alt="Федерация Республик Аякса"
-class="character-flag"
->
-
-
-<div class="character-affiliation-name">
-
-
-<span class="character-affiliation-label">
-
-Принадлежность
-
-</span>
-
-
-Федерация Республик Аякса
-
-
-</div>
-
-
-</div>
-
-
-
-<!-- ОТКРЫТИЕ ДОСЬЕ -->
-
-<div class="character-open">
-
-ОТКРЫТЬ ПОЛНОЕ ДОСЬЕ →
-
-</div>
-
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-</div>
+<script src="characters/characters.js"></script>
 
 
 </body>
