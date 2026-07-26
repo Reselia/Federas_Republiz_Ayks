@@ -13,14 +13,14 @@ const countries = [
 
         tension: 8,
 
-        relations: "Напряжённые, но без состояния войны",
+        relations: "Напряжённые, без состояния войны",
 
         /*
         Путь к флагу.
         Пока флаг не добавлен — оставить пустым.
         */
 
-        flag: "../media/images/flags/white_night_empire.png",
+        flag: "media/images/flags/white_night_empire.png",
 
         /*
         Путь к полному досье государства.
