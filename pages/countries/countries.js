@@ -106,8 +106,8 @@ countries.forEach(country => {
 
             ${
                 country.embassyFRA
-                ? "● Посольство ФРА: имеется"
-                : "● Посольство ФРА: отсутствует"
+                ? "● Посольство ФРА: активно"
+                : "● Посольство ФРА: не активно"
             }
 
         </span>
@@ -121,8 +121,8 @@ countries.forEach(country => {
 
             ${
                 country.embassyCountry
-                ? "● Посольство государства: имеется"
-                : "● Посольство государства: отсутствует"
+                ? `Посольство ${country.embassyName}: активно`
+                : `Посольство ${country.embassyName}: не активно`
             }
 
         </span>
