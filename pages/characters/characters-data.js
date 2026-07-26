@@ -44,7 +44,7 @@ const characters = [
 
         photo: "../media/images/characters/aurelia.png",
 
-        flag: "",
+        flag: "../media/images/flags/white_night_empire.png",
 
          profile: "aurelia.html"
 
