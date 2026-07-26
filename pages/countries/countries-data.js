@@ -5,6 +5,8 @@ const countries = [
 
         name: "Империя Белой Ночи",
 
+        embassyName: "ИБН",
+
         distance: "810000 ✝",
 
         embassyFRA: true,
