@@ -121,8 +121,8 @@ countries.forEach(country => {
 
             ${
                 country.embassyCountry
-                ? `Посольство ${country.embassyName}: активно`
-                : `Посольство ${country.embassyName}: не активно`
+                ? `● Посольство ${country.embassyName}: активно`
+                : `● Посольство ${country.embassyName}: не активно`
             }
 
         </span>
