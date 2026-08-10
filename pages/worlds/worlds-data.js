@@ -7,13 +7,13 @@ const worlds = [
 
         flag: "",
 
-        distance: "—",
+        distance: "12000 ",
 
         type: "Республика",
 
         lvs: "LVS-1",
 
-        profile: ""
+        profile: "eris.html"
     }
 
 ];
