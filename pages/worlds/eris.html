@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Республика Эрис | Федерация Республик Аякса</title>
+
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+
+/* =========================
+   ОСНОВНОЙ КОНТЕЙНЕР ДОСЬЕ
+========================= */
+
+#eris-dossier {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================
+   НАВИГАЦИЯ
+========================= */
+
+.dossier-navigation {
+
+    margin-bottom: 25px;
+
+}
+
+
+.dossier-back-link {
+
+    display: inline-block;
+
+    padding: 9px 16px;
+
+    border: 1px solid
+    rgba(45, 140, 255, 0.6);
+
+    border-radius: 7px;
+
+    background:
+    rgba(20, 50, 90, 0.35);
+
+    color:
+    rgba(140, 205, 255, 0.95);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.25s ease;
+
+}
+
+
+.dossier-back-link:hover {
+
+    color: #ffffff;
+
+    border-color:
+    rgba(90, 180, 255, 1);
+
+    background:
+    rgba(30, 90, 160, 0.45);
+
+    box-shadow:
+    0 0 12px
+    rgba(30, 130, 255, 0.25);
+
+}
+
+
+/* =========================
+   ШАПКА ДОСЬЕ
+========================= */
+
+.dossier-header {
+
+    display: grid;
+
+    grid-template-columns:
+    130px 1fr 130px;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 25px 30px;
+
+    margin-bottom: 35px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(20, 40, 75, 0.95),
+        rgba(8, 18, 38, 0.98)
+    );
+
+    border:
+    1px solid
+    rgba(45, 140, 255, 0.65);
+
+    border-radius: 14px;
+
+    box-shadow:
+    0 0 18px
+    rgba(30, 120, 255, 0.15),
+
+    inset 0 0 25px
+    rgba(20, 100, 200, 0.05);
+
+}
+
+
+/* =========================
+   ФЛАГ ЭРИС
+========================= */
+
+.dossier-flag {
+
+    width: 110px;
+
+    height: 72px;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+
+    border:
+    1px solid
+    rgba(100, 180, 255, 0.75);
+
+    box-shadow:
+    0 0 12px
+    rgba(30, 120, 255, 0.2);
+
+}
+
+
+/* =========================
+   ЦЕНТР ШАПКИ
+========================= */
+
+.dossier-title {
+
+    text-align: center;
+
+}
+
+
+.dossier-title h1 {
+
+    margin: 0;
+
+    font-size: 34px;
+
+    line-height: 1.25;
+
+}
+
+
+.dossier-subtitle {
+
+    margin-top: 8px;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    color:
+    rgba(140, 205, 255, 0.75);
+
+}
+
+
+.dossier-id {
+
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color:
+    rgba(120, 190, 255, 0.65);
+
+}
+
+
+/* =========================
+   ГЕРБ ЭРИС
+========================= */
+
+.dossier-coat-of-arms {
+
+    width: 100px;
+
+    height: 100px;
+
+    object-fit: contain;
+
+    justify-self: center;
+
+    padding: 8px;
+
+    box-sizing: border-box;
+
+    border:
+    1px solid
+    rgba(100, 180, 255, 0.55);
+
+    border-radius: 10px;
+
+    background:
+    rgba(5, 15, 30, 0.45);
+
+    box-shadow:
+    0 0 12px
+    rgba(30, 120, 255, 0.18);
+
+}
+
+
+/* =========================
+   ПРИНАДЛЕЖНОСТЬ К ФРА
+========================= */
+
+.dossier-federation {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 18px;
+
+    padding-top: 14px;
+
+    border-top:
+    1px solid
+    rgba(70, 150, 240, 0.3);
+
+    font-size: 13px;
+
+    color:
+    rgba(170, 210, 255, 0.8);
+
+}
+
+
+.dossier-federation-flag {
+
+    width: 42px;
+
+    height: 28px;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+
+    border:
+    1px solid
+    rgba(100, 180, 255, 0.55);
+
+}
+
+
+/* =========================
+   РАЗДЕЛЫ
+========================= */
+
+.dossier-section {
+
+    margin-bottom: 35px;
+
+}
+
+
+.dossier-section h2 {
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+
+    padding-bottom: 8px;
+
+    border-bottom:
+    1px solid
+    rgba(70, 150, 240, 0.35);
+
+}
+
+
+.dossier-section h3 {
+
+    font-size: 19px;
+
+    margin-top: 20px;
+
+    margin-bottom: 8px;
+
+}
+
+
+/* =========================
+   СПИСКИ
+========================= */
+
+.dossier-section ul {
+
+    padding-left: 25px;
+
+}
+
+
+/* =========================
+   КАРТОЧКА ДАННЫХ
+========================= */
+
+.data-card {
+
+    display: grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap: 10px 25px;
+
+    padding: 20px 22px;
+
+    background:
+    rgba(10, 25, 50, 0.55);
+
+    border:
+    1px solid
+    rgba(45, 140, 255, 0.35);
+
+    border-radius: 10px;
+
+}
+
+
+.data-item {
+
+    padding: 5px 0;
+
+}
+
+
+.data-label {
+
+    display: block;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color:
+    rgba(120, 190, 255, 0.65);
+
+}
+
+
+.data-value {
+
+    font-size: 15px;
+
+    color:
+    rgba(235, 245, 255, 0.92);
+
+}
+
+
+/* =========================
+   КОДЫ
+========================= */
+
+.code-box {
+
+    padding: 16px 20px;
+
+    background:
+    rgba(5, 15, 30, 0.65);
+
+    border:
+    1px solid
+    rgba(45, 140, 255, 0.35);
+
+    border-radius: 9px;
+
+    font-family:
+    monospace;
+
+    color:
+    rgba(170, 215, 255, 0.95);
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================
+   АДАПТИВНОСТЬ
+========================= */
+
+@media (max-width: 750px) {
+
+    .dossier-header {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+    }
+
+
+    .dossier-flag {
+
+        justify-self: center;
+
+    }
+
+
+    .dossier-coat-of-arms {
+
+        justify-self: center;
+
+    }
+
+
+    .data-card {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="content" id="eris-dossier">
+
+<!-- =========================
+     НАВИГАЦИЯ
+========================= -->
+
+<div class="dossier-navigation">
+
+<a
+href="../world-registry.html"
+class="dossier-back-link"
+
+>
+
+← Вернуться в реестр мировых субъектов
+
+</a>
+
+</div>
+
+<!-- =========================
+     ШАПКА ДОСЬЕ
+========================= -->
+
+<header class="dossier-header">
+
+<!-- ФЛАГ ЭРИС -->
+
+<img
+src="../media/images/flags/eris.png"
+alt="Флаг Республики Эрис"
+class="dossier-flag"
+
+>
+
+<!-- НАЗВАНИЕ -->
+
+<div class="dossier-title">
+
+<h1>
+РЕСПУБЛИКА ЭРИС
+</h1>
+
+<div class="dossier-subtitle">
+Мировой субъект Федерации Республик Аякса
+</div>
+
+<div class="dossier-id">
+WS-001
+</div>
+
+<!-- ПРИНАДЛЕЖНОСТЬ -->
+
+<div class="dossier-federation">
+
+<img
+src="../media/images/flags/fra.png"
+alt="Флаг Федерации Республик Аякса"
+class="dossier-federation-flag"
+
+>
+
+<span>
+Федерация Республик Аякса
+</span>
+
+</div>
+
+</div>
+
+<!-- ГЕРБ ЭРИС -->
+
+<img
+src="../media/images/emblems/eris.png"
+alt="Герб Республики Эрис"
+class="dossier-coat-of-arms"
+
+>
+
+</header>
+
+<!-- =========================
+     I. ОБЩИЕ СВЕДЕНИЯ
+========================= -->
+
+<section class="dossier-section">
+
+<h2>
+I. ОБЩИЕ СВЕДЕНИЯ
+</h2>
+
+<div class="data-card">
+
+<div class="data-item">
+
+<span class="data-label">
+Название
+</span>
+
+<span class="data-value">
+Республика Эрис
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Статус
+</span>
+
+<span class="data-value">
+Выделенное независимое государство
+в рамках классификации миров и субмиров
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Местоположение
+</span>
+
+<span class="data-value">
+Отдельная страна в пределах ограниченной территории внутри мира
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Столица
+</span>
+
+<span class="data-value">
+Астралис
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Население
+</span>
+
+<span class="data-value">
+Около 3,2 млн человек
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Язык
+</span>
+
+<span class="data-value">
+Единый язык с региональными диалектами
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Форма правления
+</span>
+
+<span class="data-value">
+Монархия с парламентскими элементами
+</span>
+
+</div>
+
+</div>
+
+<p>
+
+Республика Эрис — страна с богатой историей и сильной традицией дворянства. Центральное место занимает <strong>королевская семья</strong>, которая управляет государством, обеспечивает законность и общественный порядок. Власть монарха признаётся всеми слоями общества, а политические процессы интегрированы в традиционную систему чести и наследственных привилегий.
+
+</p>
+
+</section>
+
+<!-- =========================
+     II. ПРАВИТЕЛЬСТВО
+========================= -->
+
+<section class="dossier-section">
+
+<h2>
+II. ПРАВИТЕЛЬСТВО
+</h2>
+
+<h3>
+Королевская семья
+</h3>
+
+<p>
+Верховный правящий орган Республики Эрис.
+</p>
+
+<ul>
+
+<li>
+Монарх и ближайшие члены семьи принимают все ключевые решения, касающиеся внутренней и внешней политики, экономики, науки и судебной системы.
+</li>
+
+<li>
+Парламент и Совет знатных домов действуют как консультативные органы, однако решения в критических вопросах остаются за королевской семьёй.
+</li>
+
+<li>
+Монарх и королевская семья являются символами единства, стабильности и справедливости для населения.
+</li>
+
+</ul>
+
+</section>
+
+<!-- =========================
+     III. ПОЛИТИЧЕСКОЕ УСТРОЙСТВО
+========================= -->
+
+<section class="dossier-section">
+
+<h2>
+III. ПОЛИТИЧЕСКОЕ УСТРОЙСТВО
+</h2>
+
+<h3>
+Парламент Эрис
+</h3>
+
+<p>
+Представительный орган, формируемый дворянством и городскими элитами. Выполняет преимущественно консультативные функции.
+</p>
+
+<h3>
+Совет знатных домов
+</h3>
+
+<p>
+Влиятельная группа аристократии, участвующая в законотворчестве и государственных ритуалах.
+</p>
+
+<h3>
+Публичная власть
+</h3>
+
+<p>
+Королевская семья рассматривается как воплощение закона и государственной стабильности.
+</p>
+
+<p>
+Политическая система сочетает наследственные традиции и элементы республиканского управления, сохраняя баланс между влиянием дворянства и личной властью монарха.
+</p>
+
+</section>
+
+<!-- =========================
+     IV. КУЛЬТУРА
+========================= -->
+
+<section class="dossier-section">
+
+<h2>
+IV. КУЛЬТУРА И ОБЩЕСТВЕННАЯ ЖИЗНЬ
+</h2>
+
+<ul>
+
+<li>
+Культура Эрис пронизана дворянскими традициями, рыцарскими идеалами и строгим этикетом.
+</li>
+
+<li>
+Население разделено на дворянские семьи и аристократию, гражданское население среднего класса, крестьянство и ремесленников.
+</li>
+
+<li>
+Социальная мобильность возможна через выдающиеся заслуги, однако наследственные привилегии остаются важным фактором.
+</li>
+
+<li>
+Праздники, ритуалы и церемонии сосредоточены вокруг королевской семьи.
+</li>
+
+<li>
+Магические и мистические артефакты используются как часть культурных и политических традиций.
+</li>
+
+</ul>
+
+</section>
+
+<!-- =========================
+     V. ОТНОШЕНИЕ К МИРУ
+========================= -->
+
+<section class="dossier-section">
+
+<h2>
+V. ОТНОШЕНИЕ К МИРУ
+</h2>
+
+<p>
+
+Республика Эрис кажется стабильной и независимой, однако <strong>всё происходящее находится под скрытым наблюдением</strong>, что позволяет фиксировать последствия решений и действий ключевых персонажей.
+
+</p>
+
+<p>
+
+Интриги, личные истории и магические события переплетаются с политикой, создавая динамичную и драматичную атмосферу.
+
+</p>
+
+</section>
+
+<!-- =========================
+     VI. КАРТА МС
+========================= -->
+
+<section class="dossier-section">
+
+<h2>
+VI. КАРТА МС
+</h2>
+
+<div class="data-card">
+
+<div class="data-item">
+
+<span class="data-label">
+Название мира/субмира
+</span>
+
+<span class="data-value">
+Eris
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Тип
+</span>
+
+<span class="data-value">
+Мир
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Код
+</span>
+
+<span class="data-value">
+W-001
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Основание
+</span>
+
+<span class="data-value">
+Разветвление людских миров №5
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Квадрант
+</span>
+
+<span class="data-value">
+Г-30
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Сектор
+</span>
+
+<span class="data-value">
+455
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Статус территории
+</span>
+
+<span class="data-value">
+Федеративная
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Приоритет
+</span>
+
+<span class="data-value">
+B
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Расстояние
+</span>
+
+<span class="data-value">
+40000 ✝
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Уровень контроля (LUA)
+</span>
+
+<span class="data-value">
+1
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Уровень допуска (LVS)
+</span>
+
+<span class="data-value">
+1
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Полный код
+</span>
+
+<span class="data-value">
+W-Eris 001B
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Адрес
+</span>
+
+<span class="data-value">
+Мир Эрис 001А → квадрант Г-30 → СЕКТОР-455
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     КОДЫ ХАРАКТЕРИСТИК
+========================= -->
+
+<section class="dossier-section">
+
+<h2>
+📗 КОДЫ ХАРАКТЕРИСТИК
+</h2>
+
+<div class="code-box">
+
+S-1A/D-3A/ST-2B/T-2/TQ-2/IM-1/LF-3B/V-E2
+
+</div>
+
+</section>
+
+<!-- =========================
+     ПВМ
+========================= -->
+
+<section class="dossier-section">
+
+<h2>
+✨ ПОТОКОВАЯ ВРЕМЕННАЯ МАТЕРИЯ (ПВМ)
+</h2>
+
+<div class="data-card">
+
+<div class="data-item">
+
+<span class="data-label">
+Тип ПВМ
+</span>
+
+<span class="data-value">
+ПВМ-М — потоковая временная материя с индексом М
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Тип мира
+</span>
+
+<span class="data-value">
+Магический ❖
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     НАВИГАЦИОННАЯ СТРУКТУРА
+========================= -->
+
+<section class="dossier-section">
+
+<h2>
+🗺️ НАВИГАЦИОННАЯ СТРУКТУРА
+</h2>
+
+<div class="data-card">
+
+<div class="data-item">
+
+<span class="data-label">
+Квадрантов в мире/субмире
+</span>
+
+<span class="data-value">
+3
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Секторов в мире/субмире
+</span>
+
+<span class="data-value">
+2500
+</span>
+
+</div>
+
+<div class="data-item">
+
+<span class="data-label">
+Количество КНТО
+</span>
+
+<span class="data-value">
+Отсутствуют
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+</body>
+
+</html>
