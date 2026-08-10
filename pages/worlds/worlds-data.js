@@ -13,7 +13,7 @@ const worlds = [
 
         lvs: "LVS-1",
 
-        profile: "eris.html"
+        profile: "worlds/eris.html"
     }
 
 ];
