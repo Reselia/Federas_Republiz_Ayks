@@ -7,7 +7,7 @@ const worlds = [
 
         flag: "",
 
-        distance: "12000 ",
+        distance: "12000 ✝",
 
         type: "Республика",
 
