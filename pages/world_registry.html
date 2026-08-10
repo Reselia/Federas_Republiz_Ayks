@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -117,6 +118,55 @@
     box-shadow:
     0 0 12px
     rgba(30, 130, 255, 0.25);
+
+}
+
+
+/* =========================
+   ЗАГОЛОВКИ КОЛОНОК
+========================= */
+
+.worlds-header {
+
+    display: grid;
+
+    grid-template-columns:
+
+    2fr
+    1.4fr
+    1.4fr
+    1.2fr
+    60px;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding:
+
+    0 24px 8px 24px;
+
+}
+
+
+.world-header-label {
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color:
+
+    rgba(120, 190, 255, 0.65);
+
+}
+
+
+.world-header-label:last-child {
+
+    text-align: center;
 
 }
 
@@ -287,31 +337,6 @@
 
 
 /* =========================
-   ТЕРМИНЫ
-========================= */
-
-.world-label {
-
-    display: block;
-
-    margin-bottom: 4px;
-
-    font-size: 10px;
-
-    letter-spacing: 1.5px;
-
-    text-transform: uppercase;
-
-    color:
-
-    rgba(120, 190, 255, 0.65);
-
-    cursor: help;
-
-}
-
-
-/* =========================
    ЗНАЧЕНИЯ
 ========================= */
 
@@ -322,6 +347,40 @@
     color:
 
     rgba(235, 245, 255, 0.9);
+
+}
+
+
+/* =========================
+   РАССТОЯНИЕ
+========================= */
+
+.world-distance {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    font-size: 15px;
+
+    color:
+
+    rgba(235, 245, 255, 0.9);
+
+}
+
+
+.distance-symbol {
+
+    font-size: 12px;
+
+    color:
+
+    rgba(120, 190, 255, 0.75);
+
+    cursor: help;
 
 }
 
@@ -438,6 +497,13 @@
 
 @media (max-width: 900px) {
 
+    .worlds-header {
+
+        display: none;
+
+    }
+
+
     .world-row {
 
         grid-template-columns:
@@ -518,6 +584,34 @@
 
 
 <!-- =========================
+     ЗАГОЛОВКИ КОЛОНОК
+========================= -->
+
+<div class="worlds-header">
+
+<div class="world-header-label">
+Субъект
+</div>
+
+<div class="world-header-label">
+Расстояние до Главного узла
+</div>
+
+<div class="world-header-label">
+Тип субъекта
+</div>
+
+<div class="world-header-label">
+Уровень доступа
+</div>
+
+<div class="world-header-label">
+</div>
+
+</div>
+
+
+<!-- =========================
      СПИСОК
 ========================= -->
 
@@ -552,3 +646,4 @@ id="worlds-list"
 </body>
 
 </html>
+```
