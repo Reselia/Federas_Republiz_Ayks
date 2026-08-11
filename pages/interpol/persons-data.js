@@ -7,7 +7,7 @@ const persons = [
 
         username: "_mramoritalyanskiy",
 
-        photo: "",
+        photo: "https://i.postimg.cc/k4DdhsJP/SPOILER-image.png",
 
         labels: [
             "ПРЕДАТЕЛЬ"
