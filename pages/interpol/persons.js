@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+```
 const registry =
     document.getElementById("interpol-person-list");
 
@@ -88,7 +89,7 @@ function renderStatus(status) {
 
 if (persons.length === 0) {
 
-    registry.innerHTML = 
+    registry.innerHTML = `
 
         <div class="interpol-empty-state">
 
@@ -107,7 +108,7 @@ if (persons.length === 0) {
 
         </div>
 
-    ;
+    `;
 
     return;
 }
@@ -121,8 +122,10 @@ persons.forEach(person => {
     const card =
         document.createElement("article");
 
+
     card.className =
         "interpol-person-card";
+
 
     card.dataset.personId =
         safeValue(
@@ -131,7 +134,7 @@ persons.forEach(person => {
         );
 
 
-    card.innerHTML = 
+    card.innerHTML = `
 
         <div class="person-card-main">
 
@@ -141,25 +144,25 @@ persons.forEach(person => {
                     person.photo
                     ?
 
-                    
+                    `
                     <img
                         src="${person.photo}"
                         alt="Фотография: ${safeValue(person.name)}"
                         class="person-photo"
                         loading="lazy"
                     >
-                    
+                    `
 
                     :
 
-                    
+                    `
                     <div
                         class="person-photo-empty"
                         aria-label="Фотография отсутствует"
                     >
                         ФОТО
                     </div>
-                    
+                    `
                 }
 
             </div>
@@ -267,7 +270,7 @@ persons.forEach(person => {
                 person.document
                 ?
 
-                
+                `
                 <a
                     href="${person.document}"
                     class="person-document-button"
@@ -284,24 +287,24 @@ persons.forEach(person => {
                     </span>
 
                 </a>
-                
+                `
 
                 :
 
-                
+                `
                 <div class="person-document-unavailable">
                     ОФИЦИАЛЬНЫЙ ДОКУМЕНТ НЕ ОПУБЛИКОВАН
-                </div>
-                
+                `
             }
 
         </div>
 
-    ;
+    `;
 
 
     registry.appendChild(card);
 
 });
+```
 
 });
