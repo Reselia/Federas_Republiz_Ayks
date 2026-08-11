@@ -50,11 +50,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         return labels
             .filter(label => label)
-            .map(label => 
+            .map(label => `
                 <span class="person-label">
                     ${safeValue(label)}
                 </span>
-            )
+            `)
             .join("");
     }
 
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (persons.length === 0) {
 
-        registry.innerHTML = 
+        registry.innerHTML = `
 
             <div class="interpol-empty-state">
 
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             </div>
 
-        
+        `;
 
         return;
     }
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
 
-        card.innerHTML = 
+        card.innerHTML = `
 
             <div class="person-card-main">
 
@@ -144,25 +144,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         ?
 
-                        
+                        `
                         <img
                             src="${person.photo}"
                             alt="Фотография: ${safeValue(person.name)}"
                             class="person-photo"
                             loading="lazy"
                         >
-                        
+                        `
 
-                        
+                        :
 
-                        
+                        `
                         <div
                             class="person-photo-empty"
                             aria-label="Фотография отсутствует"
                         >
                             ФОТО
                         </div>
-                        
+                        `
                     }
 
                 </div>
@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     ?
 
-                    
+                    `
                     <a
                         href="${person.document}"
                         class="person-document-button"
@@ -288,20 +288,20 @@ document.addEventListener("DOMContentLoaded", () => {
                         </span>
 
                     </a>
-                    
+                    `
 
-                    
+                    :
 
-                    
+                    `
                     <div class="person-document-unavailable">
                         ОФИЦИАЛЬНЫЙ ДОКУМЕНТ НЕ ОПУБЛИКОВАН
                     </div>
-                    
+                    `
                 }
 
             </div>
 
-        
+        `;
 
 
         registry.appendChild(card);
