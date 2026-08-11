@@ -1,0 +1,1045 @@
+```css
+/* =========================================================
+   INTERPOL — ОСНОВНОЕ ОФОРМЛЕНИЕ
+   Федерация Республик Аякса
+========================================================= */
+
+
+/* =========================================================
+   ОСНОВА
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(120, 30, 30, 0.10),
+            transparent 38%
+        ),
+        linear-gradient(
+            180deg,
+            #080b10 0%,
+            #0b0f15 45%,
+            #070a0f 100%
+        );
+
+    color: #dce3ea;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    min-height: 100vh;
+
+}
+
+
+/* =========================================================
+   ОСНОВНАЯ ОБОЛОЧКА
+========================================================= */
+
+.interpol-shell {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+}
+
+
+/* =========================================================
+   ШАПКА
+========================================================= */
+
+.interpol-header {
+
+    border-bottom:
+        1px solid
+        rgba(180, 45, 45, 0.45);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(17, 20, 27, 0.98),
+            rgba(10, 13, 18, 0.96)
+        );
+
+    box-shadow:
+        0 4px 25px
+        rgba(0, 0, 0, 0.35);
+
+}
+
+
+.interpol-header-inner {
+
+    width: min(
+        1200px,
+        calc(100% - 40px)
+    );
+
+    margin: 0 auto;
+
+    min-height: 190px;
+
+    display: grid;
+
+    grid-template-columns:
+        150px
+        1fr
+        180px;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+/* =========================================================
+   СИМВОЛ
+========================================================= */
+
+.interpol-system-mark {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+}
+
+
+.mark-line {
+
+    width: 35px;
+
+    height: 1px;
+
+    background:
+        rgba(190, 60, 60, 0.7);
+
+}
+
+
+.mark-symbol {
+
+    font-size: 28px;
+
+    color:
+        rgba(220, 75, 75, 0.9);
+
+    text-shadow:
+        0 0 14px
+        rgba(200, 40, 40, 0.35);
+
+}
+
+
+/* =========================================================
+   ЗАГОЛОВОК
+========================================================= */
+
+.interpol-title-block {
+
+    text-align: center;
+
+}
+
+
+.interpol-overline {
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color:
+        rgba(190, 200, 210, 0.5);
+
+    margin-bottom: 12px;
+
+}
+
+
+.interpol-title-block h1 {
+
+    margin: 0;
+
+    font-size: 46px;
+
+    line-height: 1;
+
+    letter-spacing: 8px;
+
+    font-weight: 700;
+
+    color:
+        rgba(240, 243, 246, 0.97);
+
+}
+
+
+.interpol-title-block p {
+
+    margin: 15px 0 0;
+
+    font-size: 13px;
+
+    letter-spacing: 1.5px;
+
+    color:
+        rgba(175, 185, 195, 0.65);
+
+}
+
+
+/* =========================================================
+   СТАТУС
+========================================================= */
+
+.interpol-status {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    color:
+        rgba(155, 205, 170, 0.75);
+
+}
+
+
+.status-indicator {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        #6fc58a;
+
+    box-shadow:
+        0 0 9px
+        rgba(90, 210, 125, 0.65);
+
+}
+
+
+/* =========================================================
+   НАВИГАЦИЯ
+========================================================= */
+
+.interpol-navigation {
+
+    width: min(
+        1200px,
+        calc(100% - 40px)
+    );
+
+    margin: 25px auto 0;
+
+}
+
+
+.interpol-navigation a {
+
+    display: inline-block;
+
+    padding: 9px 15px;
+
+    border:
+        1px solid
+        rgba(120, 130, 145, 0.35);
+
+    border-radius: 6px;
+
+    background:
+        rgba(20, 24, 31, 0.65);
+
+    color:
+        rgba(180, 190, 200, 0.75);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 0.8px;
+
+    transition:
+        0.2s ease;
+
+}
+
+
+.interpol-navigation a:hover {
+
+    color:
+        rgba(235, 240, 245, 0.95);
+
+    border-color:
+        rgba(190, 60, 60, 0.65);
+
+    background:
+        rgba(50, 22, 25, 0.55);
+
+}
+
+
+/* =========================================================
+   ОСНОВНОЙ КОНТЕНТ
+========================================================= */
+
+.interpol-main {
+
+    width: min(
+        1200px,
+        calc(100% - 40px)
+    );
+
+    margin: 35px auto 70px;
+
+}
+
+
+/* =========================================================
+   ВВОДНАЯ ПАНЕЛЬ
+========================================================= */
+
+.interpol-intro {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        120px
+        1fr;
+
+    gap: 30px;
+
+    padding: 32px;
+
+    margin-bottom: 45px;
+
+    border:
+        1px solid
+        rgba(100, 110, 125, 0.28);
+
+    border-left:
+        3px solid
+        rgba(185, 55, 55, 0.8);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(24, 28, 36, 0.92),
+            rgba(12, 15, 21, 0.96)
+        );
+
+    box-shadow:
+        inset 0 0 25px
+        rgba(0, 0, 0, 0.15);
+
+}
+
+
+.intro-code {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    padding-top: 4px;
+
+    font-size: 15px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    color:
+        rgba(200, 75, 75, 0.85);
+
+}
+
+
+.intro-content h2 {
+
+    margin: 0 0 16px;
+
+    font-size: 20px;
+
+    letter-spacing: 1.5px;
+
+    color:
+        rgba(225, 230, 235, 0.95);
+
+}
+
+
+.intro-content p {
+
+    margin: 0 0 12px;
+
+    max-width: 900px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color:
+        rgba(180, 190, 200, 0.75);
+
+}
+
+
+.intro-content p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* =========================================================
+   ЗАГОЛОВКИ РАЗДЕЛОВ
+========================================================= */
+
+.section-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.section-index {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(190, 60, 60, 0.8);
+
+}
+
+
+.section-heading h2 {
+
+    margin: 0;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+
+    color:
+        rgba(210, 218, 225, 0.85);
+
+}
+
+
+/* =========================================================
+   СТРАНЫ-УЧАСТНИЦЫ
+========================================================= */
+
+.interpol-members {
+
+    margin-bottom: 50px;
+
+}
+
+
+.member-card {
+
+    display: grid;
+
+    grid-template-columns:
+        70px
+        1fr
+        80px;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px 22px;
+
+    border:
+        1px solid
+        rgba(100, 110, 125, 0.28);
+
+    background:
+        rgba(16, 20, 27, 0.85);
+
+    transition:
+        0.2s ease;
+
+}
+
+
+.member-card:hover {
+
+    border-color:
+        rgba(170, 55, 55, 0.55);
+
+    background:
+        rgba(25, 22, 28, 0.9);
+
+}
+
+
+.member-flag img {
+
+    display: block;
+
+    width: 58px;
+
+    height: 38px;
+
+    object-fit: cover;
+
+    border:
+        1px solid
+        rgba(120, 130, 140, 0.45);
+
+}
+
+
+.member-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.member-label {
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    color:
+        rgba(140, 150, 160, 0.55);
+
+}
+
+
+.member-info strong {
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    color:
+        rgba(220, 225, 230, 0.9);
+
+}
+
+
+.member-code {
+
+    text-align: right;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(150, 160, 170, 0.55);
+
+}
+
+
+/* =========================================================
+   КАРТОЧКИ РЕЕСТРОВ
+========================================================= */
+
+.interpol-sections {
+
+    margin-bottom: 50px;
+
+}
+
+
+.interpol-section-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+
+}
+
+
+.interpol-section-card {
+
+    position: relative;
+
+    min-height: 285px;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(100, 110, 125, 0.28);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(22, 26, 34, 0.95),
+            rgba(11, 14, 20, 0.98)
+        );
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.interpol-section-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+        rgba(150, 55, 55, 0.65);
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        left;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.interpol-section-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(175, 60, 60, 0.65);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.35);
+
+}
+
+
+.interpol-section-card:hover::before {
+
+    transform:
+        scaleX(1);
+
+}
+
+
+.card-number {
+
+    position: absolute;
+
+    top: 20px;
+    right: 22px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(130, 140, 150, 0.35);
+
+}
+
+
+.card-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 35px;
+
+    border:
+        1px solid
+        rgba(160, 60, 60, 0.45);
+
+    color:
+        rgba(205, 80, 80, 0.8);
+
+    font-size: 20px;
+
+}
+
+
+.card-content {
+
+    flex: 1;
+
+}
+
+
+.card-label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(145, 155, 165, 0.5);
+
+}
+
+
+.card-content h3 {
+
+    margin: 0 0 14px;
+
+    font-size: 17px;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.8px;
+
+    color:
+        rgba(220, 225, 230, 0.9);
+
+}
+
+
+.card-content p {
+
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+
+    color:
+        rgba(160, 170, 180, 0.65);
+
+}
+
+
+.card-arrow {
+
+    align-self: flex-end;
+
+    margin-top: 20px;
+
+    font-size: 21px;
+
+    color:
+        rgba(185, 65, 65, 0.7);
+
+    transition:
+        transform 0.25s ease;
+
+}
+
+
+.interpol-section-card:hover .card-arrow {
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/* =========================================================
+   УВЕДОМЛЕНИЕ
+========================================================= */
+
+.interpol-notice {
+
+    display: grid;
+
+    grid-template-columns:
+        55px
+        1fr;
+
+    gap: 18px;
+
+    padding: 22px 25px;
+
+    border:
+        1px solid
+        rgba(120, 100, 70, 0.35);
+
+    background:
+        rgba(35, 29, 20, 0.55);
+
+}
+
+
+.notice-mark {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(190, 150, 70, 0.55);
+
+    color:
+        rgba(215, 175, 90, 0.85);
+
+    font-weight: 700;
+
+}
+
+
+.notice-label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(200, 170, 105, 0.65);
+
+}
+
+
+.notice-content p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color:
+        rgba(175, 165, 145, 0.65);
+
+}
+
+
+/* =========================================================
+   ПОДВАЛ
+========================================================= */
+
+.interpol-footer {
+
+    width: min(
+        1200px,
+        calc(100% - 40px)
+    );
+
+    margin: 0 auto;
+
+    padding: 22px 0 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    border-top:
+        1px solid
+        rgba(100, 110, 125, 0.18);
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    color:
+        rgba(130, 140, 150, 0.4);
+
+}
+
+
+/* =========================================================
+   АДАПТИВНОСТЬ
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .interpol-header-inner {
+
+        grid-template-columns:
+            1fr;
+
+        padding: 35px 0;
+
+        gap: 20px;
+
+    }
+
+
+    .interpol-system-mark {
+
+        display: none;
+
+    }
+
+
+    .interpol-status {
+
+        justify-content: center;
+
+    }
+
+
+    .interpol-section-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .interpol-main,
+    .interpol-navigation,
+    .interpol-footer,
+    .interpol-header-inner {
+
+        width:
+            calc(100% - 24px);
+
+    }
+
+
+    .interpol-title-block h1 {
+
+        font-size: 34px;
+
+        letter-spacing: 5px;
+
+    }
+
+
+    .interpol-intro {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 15px;
+
+        padding: 22px;
+
+    }
+
+
+    .intro-code {
+
+        justify-content: flex-start;
+
+    }
+
+
+    .member-card {
+
+        grid-template-columns:
+            60px
+            1fr;
+
+    }
+
+
+    .member-code {
+
+        display: none;
+
+    }
+
+
+    .interpol-footer {
+
+        flex-direction: column;
+
+        gap: 8px;
+
+    }
+
+}
+```
