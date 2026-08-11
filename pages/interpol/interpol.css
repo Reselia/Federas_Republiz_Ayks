@@ -1,26 +1,17 @@
-```css
 /* =========================================================
    INTERPOL — ОСНОВНОЕ ОФОРМЛЕНИЕ
    Федерация Республик Аякса
-========================================================= */
-
-
-/* =========================================================
-   ОСНОВА
 ========================================================= */
 
 * {
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
-
     margin: 0;
 
     background:
@@ -44,20 +35,11 @@ body {
         sans-serif;
 
     min-height: 100vh;
-
 }
 
-
-/* =========================================================
-   ОСНОВНАЯ ОБОЛОЧКА
-========================================================= */
-
 .interpol-shell {
-
     width: 100%;
-
     min-height: 100vh;
-
 }
 
 
@@ -66,7 +48,6 @@ body {
 ========================================================= */
 
 .interpol-header {
-
     border-bottom:
         1px solid
         rgba(180, 45, 45, 0.45);
@@ -81,12 +62,9 @@ body {
     box-shadow:
         0 4px 25px
         rgba(0, 0, 0, 0.35);
-
 }
 
-
 .interpol-header-inner {
-
     width: min(
         1200px,
         calc(100% - 40px)
@@ -106,7 +84,6 @@ body {
     align-items: center;
 
     gap: 30px;
-
 }
 
 
@@ -115,7 +92,6 @@ body {
 ========================================================= */
 
 .interpol-system-mark {
-
     display: flex;
 
     align-items: center;
@@ -123,24 +99,17 @@ body {
     justify-content: center;
 
     gap: 10px;
-
 }
 
-
 .mark-line {
-
     width: 35px;
-
     height: 1px;
 
     background:
         rgba(190, 60, 60, 0.7);
-
 }
 
-
 .mark-symbol {
-
     font-size: 28px;
 
     color:
@@ -149,7 +118,6 @@ body {
     text-shadow:
         0 0 14px
         rgba(200, 40, 40, 0.35);
-
 }
 
 
@@ -158,14 +126,10 @@ body {
 ========================================================= */
 
 .interpol-title-block {
-
     text-align: center;
-
 }
 
-
 .interpol-overline {
-
     font-size: 11px;
 
     letter-spacing: 4px;
@@ -174,12 +138,9 @@ body {
         rgba(190, 200, 210, 0.5);
 
     margin-bottom: 12px;
-
 }
 
-
 .interpol-title-block h1 {
-
     margin: 0;
 
     font-size: 46px;
@@ -192,12 +153,9 @@ body {
 
     color:
         rgba(240, 243, 246, 0.97);
-
 }
 
-
 .interpol-title-block p {
-
     margin: 15px 0 0;
 
     font-size: 13px;
@@ -206,7 +164,6 @@ body {
 
     color:
         rgba(175, 185, 195, 0.65);
-
 }
 
 
@@ -215,7 +172,6 @@ body {
 ========================================================= */
 
 .interpol-status {
-
     display: flex;
 
     align-items: center;
@@ -230,14 +186,10 @@ body {
 
     color:
         rgba(155, 205, 170, 0.75);
-
 }
 
-
 .status-indicator {
-
     width: 7px;
-
     height: 7px;
 
     border-radius: 50%;
@@ -248,7 +200,6 @@ body {
     box-shadow:
         0 0 9px
         rgba(90, 210, 125, 0.65);
-
 }
 
 
@@ -257,19 +208,15 @@ body {
 ========================================================= */
 
 .interpol-navigation {
-
     width: min(
         1200px,
         calc(100% - 40px)
     );
 
     margin: 25px auto 0;
-
 }
 
-
 .interpol-navigation a {
-
     display: inline-block;
 
     padding: 9px 15px;
@@ -294,12 +241,9 @@ body {
 
     transition:
         0.2s ease;
-
 }
 
-
 .interpol-navigation a:hover {
-
     color:
         rgba(235, 240, 245, 0.95);
 
@@ -308,7 +252,6 @@ body {
 
     background:
         rgba(50, 22, 25, 0.55);
-
 }
 
 
@@ -317,14 +260,12 @@ body {
 ========================================================= */
 
 .interpol-main {
-
     width: min(
         1200px,
         calc(100% - 40px)
     );
 
     margin: 35px auto 70px;
-
 }
 
 
@@ -333,7 +274,6 @@ body {
 ========================================================= */
 
 .interpol-intro {
-
     position: relative;
 
     display: grid;
@@ -366,12 +306,9 @@ body {
     box-shadow:
         inset 0 0 25px
         rgba(0, 0, 0, 0.15);
-
 }
 
-
 .intro-code {
-
     display: flex;
 
     align-items: flex-start;
@@ -388,12 +325,9 @@ body {
 
     color:
         rgba(200, 75, 75, 0.85);
-
 }
 
-
 .intro-content h2 {
-
     margin: 0 0 16px;
 
     font-size: 20px;
@@ -402,12 +336,9 @@ body {
 
     color:
         rgba(225, 230, 235, 0.95);
-
 }
 
-
 .intro-content p {
-
     margin: 0 0 12px;
 
     max-width: 900px;
@@ -418,14 +349,10 @@ body {
 
     color:
         rgba(180, 190, 200, 0.75);
-
 }
 
-
 .intro-content p:last-child {
-
     margin-bottom: 0;
-
 }
 
 
@@ -434,7 +361,6 @@ body {
 ========================================================= */
 
 .section-heading {
-
     display: flex;
 
     align-items: center;
@@ -442,24 +368,18 @@ body {
     gap: 15px;
 
     margin-bottom: 20px;
-
 }
 
-
 .section-index {
-
     font-size: 10px;
 
     letter-spacing: 2px;
 
     color:
         rgba(190, 60, 60, 0.8);
-
 }
 
-
 .section-heading h2 {
-
     margin: 0;
 
     font-size: 15px;
@@ -470,7 +390,6 @@ body {
 
     color:
         rgba(210, 218, 225, 0.85);
-
 }
 
 
@@ -479,14 +398,10 @@ body {
 ========================================================= */
 
 .interpol-members {
-
     margin-bottom: 50px;
-
 }
 
-
 .member-card {
-
     display: grid;
 
     grid-template-columns:
@@ -509,27 +424,20 @@ body {
 
     transition:
         0.2s ease;
-
 }
 
-
 .member-card:hover {
-
     border-color:
         rgba(170, 55, 55, 0.55);
 
     background:
         rgba(25, 22, 28, 0.9);
-
 }
 
-
 .member-flag img {
-
     display: block;
 
     width: 58px;
-
     height: 38px;
 
     object-fit: cover;
@@ -537,47 +445,35 @@ body {
     border:
         1px solid
         rgba(120, 130, 140, 0.45);
-
 }
 
-
 .member-info {
-
     display: flex;
 
     flex-direction: column;
 
     gap: 5px;
-
 }
 
-
 .member-label {
-
     font-size: 9px;
 
     letter-spacing: 1.5px;
 
     color:
         rgba(140, 150, 160, 0.55);
-
 }
 
-
 .member-info strong {
-
     font-size: 16px;
 
     font-weight: 500;
 
     color:
         rgba(220, 225, 230, 0.9);
-
 }
 
-
 .member-code {
-
     text-align: right;
 
     font-size: 11px;
@@ -586,7 +482,6 @@ body {
 
     color:
         rgba(150, 160, 170, 0.55);
-
 }
 
 
@@ -595,26 +490,19 @@ body {
 ========================================================= */
 
 .interpol-sections {
-
     margin-bottom: 50px;
-
 }
 
-
 .interpol-section-grid {
-
     display: grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
     gap: 16px;
-
 }
 
-
 .interpol-section-card {
-
     position: relative;
 
     min-height: 285px;
@@ -646,12 +534,9 @@ body {
         transform 0.25s ease,
         border-color 0.25s ease,
         box-shadow 0.25s ease;
-
 }
 
-
 .interpol-section-card::before {
-
     content: "";
 
     position: absolute;
@@ -673,12 +558,9 @@ body {
 
     transition:
         transform 0.3s ease;
-
 }
 
-
 .interpol-section-card:hover {
-
     transform:
         translateY(-4px);
 
@@ -688,20 +570,14 @@ body {
     box-shadow:
         0 12px 30px
         rgba(0, 0, 0, 0.35);
-
 }
-
 
 .interpol-section-card:hover::before {
-
     transform:
         scaleX(1);
-
 }
 
-
 .card-number {
-
     position: absolute;
 
     top: 20px;
@@ -713,14 +589,10 @@ body {
 
     color:
         rgba(130, 140, 150, 0.35);
-
 }
 
-
 .card-icon {
-
     width: 45px;
-
     height: 45px;
 
     display: flex;
@@ -739,19 +611,13 @@ body {
         rgba(205, 80, 80, 0.8);
 
     font-size: 20px;
-
 }
-
 
 .card-content {
-
     flex: 1;
-
 }
 
-
 .card-label {
-
     display: block;
 
     margin-bottom: 8px;
@@ -762,12 +628,9 @@ body {
 
     color:
         rgba(145, 155, 165, 0.5);
-
 }
 
-
 .card-content h3 {
-
     margin: 0 0 14px;
 
     font-size: 17px;
@@ -778,12 +641,9 @@ body {
 
     color:
         rgba(220, 225, 230, 0.9);
-
 }
 
-
 .card-content p {
-
     margin: 0;
 
     font-size: 13px;
@@ -792,12 +652,9 @@ body {
 
     color:
         rgba(160, 170, 180, 0.65);
-
 }
 
-
 .card-arrow {
-
     align-self: flex-end;
 
     margin-top: 20px;
@@ -809,15 +666,11 @@ body {
 
     transition:
         transform 0.25s ease;
-
 }
 
-
 .interpol-section-card:hover .card-arrow {
-
     transform:
         translateX(5px);
-
 }
 
 
@@ -826,7 +679,6 @@ body {
 ========================================================= */
 
 .interpol-notice {
-
     display: grid;
 
     grid-template-columns:
@@ -843,14 +695,10 @@ body {
 
     background:
         rgba(35, 29, 20, 0.55);
-
 }
 
-
 .notice-mark {
-
     width: 38px;
-
     height: 38px;
 
     display: flex;
@@ -867,12 +715,9 @@ body {
         rgba(215, 175, 90, 0.85);
 
     font-weight: 700;
-
 }
 
-
 .notice-label {
-
     display: block;
 
     margin-bottom: 7px;
@@ -883,12 +728,9 @@ body {
 
     color:
         rgba(200, 170, 105, 0.65);
-
 }
 
-
 .notice-content p {
-
     margin: 0;
 
     font-size: 12px;
@@ -897,7 +739,6 @@ body {
 
     color:
         rgba(175, 165, 145, 0.65);
-
 }
 
 
@@ -906,7 +747,6 @@ body {
 ========================================================= */
 
 .interpol-footer {
-
     width: min(
         1200px,
         calc(100% - 40px)
@@ -930,7 +770,405 @@ body {
 
     color:
         rgba(130, 140, 150, 0.4);
+}
 
+
+/* =========================================================
+   ИНТЕРПОЛ — РЕЕСТР ПЕРСОН
+========================================================= */
+
+.interpol-person-card {
+    width: 100%;
+
+    margin-bottom: 18px;
+
+    border:
+        1px solid
+        rgba(100, 110, 125, 0.28);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(22, 26, 34, 0.95),
+            rgba(11, 14, 20, 0.98)
+        );
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.interpol-person-card:hover {
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(175, 60, 60, 0.65);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   ВЕРХНЯЯ ЧАСТЬ КАРТОЧКИ
+========================================================= */
+
+.person-card-main {
+    display: grid;
+
+    grid-template-columns:
+        120px
+        1fr;
+
+    gap: 25px;
+
+    padding: 25px;
+}
+
+
+/* =========================================================
+   ФОТО
+========================================================= */
+
+.person-photo-container {
+    width: 120px;
+    height: 150px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(130, 140, 150, 0.4);
+
+    background:
+        rgba(8, 11, 16, 0.8);
+}
+
+.person-photo {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   ИНФОРМАЦИЯ О ПЕРСОНЕ
+========================================================= */
+
+.person-information {
+    min-width: 0;
+}
+
+.person-name-row {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 8px;
+}
+
+.person-name {
+    margin: 0;
+
+    font-size: 21px;
+
+    line-height: 1.4;
+
+    font-weight: 600;
+
+    color:
+        rgba(225, 230, 235, 0.95);
+}
+
+.person-labels {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+.person-label {
+    display: inline-block;
+
+    padding: 4px 8px;
+
+    border:
+        1px solid
+        rgba(175, 60, 60, 0.55);
+
+    background:
+        rgba(80, 25, 30, 0.35);
+
+    color:
+        rgba(215, 105, 105, 0.9);
+
+    font-size: 8px;
+
+    letter-spacing: 1.3px;
+}
+
+.person-id {
+    margin-bottom: 20px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(140, 150, 160, 0.5);
+}
+
+.person-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.person-status-label {
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    color:
+        rgba(140, 150, 160, 0.5);
+}
+
+.person-status-value {
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    color:
+        rgba(150, 205, 165, 0.8);
+}
+
+
+/* =========================================================
+   СЛУЖЕБНЫЕ ДАННЫЕ
+========================================================= */
+
+.person-meta {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    border-top:
+        1px solid
+        rgba(100, 110, 125, 0.18);
+
+    border-bottom:
+        1px solid
+        rgba(100, 110, 125, 0.18);
+}
+
+.person-meta-item {
+    padding: 15px 20px;
+
+    border-right:
+        1px solid
+        rgba(100, 110, 125, 0.15);
+}
+
+.person-meta-item:last-child {
+    border-right:
+        none;
+}
+
+.person-meta-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+    color:
+        rgba(140, 150, 160, 0.5);
+}
+
+.person-meta-value {
+    font-size: 12px;
+
+    color:
+        rgba(205, 215, 225, 0.8);
+}
+
+
+/* =========================================================
+   ОСНОВАНИЕ ВНЕСЕНИЯ
+========================================================= */
+
+.person-card-reason {
+    padding: 20px 25px;
+
+    border-bottom:
+        1px solid
+        rgba(100, 110, 125, 0.18);
+}
+
+.person-section-label {
+    margin-bottom: 8px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(190, 60, 60, 0.7);
+}
+
+.person-card-reason p {
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color:
+        rgba(175, 185, 195, 0.72);
+}
+
+
+/* =========================================================
+   ОФИЦИАЛЬНЫЙ ДОКУМЕНТ
+========================================================= */
+
+.person-card-document {
+    padding: 18px 25px;
+}
+
+.person-document-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    min-width: 260px;
+
+    padding: 10px 14px;
+
+    border:
+        1px solid
+        rgba(120, 130, 145, 0.35);
+
+    background:
+        rgba(20, 24, 31, 0.65);
+
+    color:
+        rgba(190, 200, 210, 0.8);
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    transition:
+        0.2s ease;
+}
+
+.person-document-button:hover {
+    border-color:
+        rgba(190, 60, 60, 0.65);
+
+    background:
+        rgba(50, 22, 25, 0.55);
+
+    color:
+        rgba(235, 240, 245, 0.95);
+}
+
+.person-document-button span:last-child {
+    color:
+        rgba(190, 65, 65, 0.8);
+
+    font-size: 16px;
+}
+
+.person-document-unavailable {
+    font-size: 9px;
+
+    letter-spacing: 1.3px;
+
+    color:
+        rgba(130, 140, 150, 0.4);
+}
+
+
+/* =========================================================
+   ПУСТОЙ РЕЕСТР
+========================================================= */
+
+.interpol-empty-state {
+    margin-top: 30px;
+
+    padding: 55px 35px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        rgba(100, 110, 125, 0.22);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20, 24, 31, 0.8),
+            rgba(10, 13, 18, 0.9)
+        );
+}
+
+.empty-code {
+    margin-bottom: 20px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(150, 160, 170, 0.4);
+}
+
+.interpol-empty-state h3 {
+    margin: 0 0 16px;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(200, 210, 220, 0.7);
+}
+
+.interpol-empty-state p {
+    margin: 0;
+
+    line-height: 1.8;
+
+    font-size: 12px;
+
+    color:
+        rgba(145, 155, 165, 0.55);
 }
 
 
@@ -941,38 +1179,68 @@ body {
 @media (max-width: 950px) {
 
     .interpol-header-inner {
-
         grid-template-columns:
             1fr;
 
         padding: 35px 0;
 
         gap: 20px;
-
     }
-
 
     .interpol-system-mark {
-
         display: none;
-
     }
-
 
     .interpol-status {
-
         justify-content: center;
-
     }
-
 
     .interpol-section-grid {
-
         grid-template-columns:
             1fr;
+    }
+}
 
+
+@media (max-width: 700px) {
+
+    .person-card-main {
+        grid-template-columns:
+            1fr;
     }
 
+    .person-photo-container {
+        width: 100px;
+        height: 125px;
+    }
+
+    .person-meta {
+        grid-template-columns:
+            1fr;
+    }
+
+    .person-meta-item {
+        border-right:
+            none;
+
+        border-bottom:
+            1px solid
+            rgba(100, 110, 125, 0.15);
+    }
+
+    .person-meta-item:last-child {
+        border-bottom:
+            none;
+    }
+
+    .person-name {
+        font-size: 18px;
+    }
+
+    .person-document-button {
+        width: 100%;
+        min-width: 0;
+    }
 }
 
 
@@ -982,653 +1250,44 @@ body {
     .interpol-navigation,
     .interpol-footer,
     .interpol-header-inner {
-
         width:
             calc(100% - 24px);
-
     }
 
-
     .interpol-title-block h1 {
-
         font-size: 34px;
 
         letter-spacing: 5px;
-
     }
 
-
     .interpol-intro {
-
         grid-template-columns:
             1fr;
 
         gap: 15px;
 
         padding: 22px;
-
     }
-
 
     .intro-code {
-
-        justify-content: flex-start;
-
+        justify-content:
+            flex-start;
     }
 
-
     .member-card {
-
         grid-template-columns:
             60px
             1fr;
-
     }
-
 
     .member-code {
-
         display: none;
-
     }
-
 
     .interpol-footer {
-
-        flex-direction: column;
+        flex-direction:
+            column;
 
         gap: 8px;
-
     }
-
 }
-/* =========================================================
-INTERPOL — РЕЕСТР ПЕРСОН
-========================================================= */
-
-/* =========================================================
-КАРТОЧКА ПЕРСОНЫ
-========================================================= */
-
-.interpol-person-card {
-
-```
-width: 100%;
-
-margin-bottom: 18px;
-
-border:
-    1px solid
-    rgba(100, 110, 125, 0.28);
-
-background:
-    linear-gradient(
-        145deg,
-        rgba(22, 26, 34, 0.95),
-        rgba(11, 14, 20, 0.98)
-    );
-
-transition:
-    border-color 0.25s ease,
-    box-shadow 0.25s ease,
-    transform 0.25s ease;
-```
-
-}
-
-.interpol-person-card:hover {
-
-```
-transform:
-    translateY(-2px);
-
-border-color:
-    rgba(175, 60, 60, 0.65);
-
-box-shadow:
-    0 10px 25px
-    rgba(0, 0, 0, 0.3);
-```
-
-}
-
-/* =========================================================
-ВЕРХНЯЯ ЧАСТЬ
-========================================================= */
-
-.person-card-main {
-
-```
-display: grid;
-
-grid-template-columns:
-    120px
-    1fr;
-
-gap: 25px;
-
-padding: 25px;
-```
-
-}
-
-/* =========================================================
-ФОТО
-========================================================= */
-
-.person-photo-container {
-
-```
-width: 120px;
-
-height: 150px;
-
-overflow: hidden;
-
-border:
-    1px solid
-    rgba(130, 140, 150, 0.4);
-
-background:
-    rgba(8, 11, 16, 0.8);
-```
-
-}
-
-.person-photo {
-
-```
-display: block;
-
-width: 100%;
-
-height: 100%;
-
-object-fit: cover;
-```
-
-}
-
-/* =========================================================
-ИНФОРМАЦИЯ
-========================================================= */
-
-.person-information {
-
-```
-min-width: 0;
-```
-
-}
-
-.person-name-row {
-
-```
-display: flex;
-
-align-items: center;
-
-flex-wrap: wrap;
-
-gap: 12px;
-
-margin-bottom: 8px;
-```
-
-}
-
-.person-name {
-
-```
-margin: 0;
-
-font-size: 21px;
-
-line-height: 1.4;
-
-font-weight: 600;
-
-color:
-    rgba(225, 230, 235, 0.95);
-```
-
-}
-
-.person-labels {
-
-```
-display: flex;
-
-align-items: center;
-
-flex-wrap: wrap;
-
-gap: 6px;
-```
-
-}
-
-.person-label {
-
-```
-display: inline-block;
-
-padding: 4px 8px;
-
-border:
-    1px solid
-    rgba(175, 60, 60, 0.55);
-
-background:
-    rgba(80, 25, 30, 0.35);
-
-color:
-    rgba(215, 105, 105, 0.9);
-
-font-size: 8px;
-
-letter-spacing: 1.3px;
-```
-
-}
-
-.person-id {
-
-```
-margin-bottom: 20px;
-
-font-size: 10px;
-
-letter-spacing: 2px;
-
-color:
-    rgba(140, 150, 160, 0.5);
-```
-
-}
-
-.person-status {
-
-```
-display: flex;
-
-align-items: center;
-
-gap: 10px;
-```
-
-}
-
-.person-status-label {
-
-```
-font-size: 9px;
-
-letter-spacing: 1.5px;
-
-color:
-    rgba(140, 150, 160, 0.5);
-```
-
-}
-
-.person-status-value {
-
-```
-font-size: 10px;
-
-letter-spacing: 1px;
-
-color:
-    rgba(150, 205, 165, 0.8);
-```
-
-}
-
-/* =========================================================
-СЛУЖЕБНЫЕ ДАННЫЕ
-========================================================= */
-
-.person-meta {
-
-```
-display: grid;
-
-grid-template-columns:
-    repeat(3, 1fr);
-
-border-top:
-    1px solid
-    rgba(100, 110, 125, 0.18);
-
-border-bottom:
-    1px solid
-    rgba(100, 110, 125, 0.18);
-```
-
-}
-
-.person-meta-item {
-
-```
-padding: 15px 20px;
-
-border-right:
-    1px solid
-    rgba(100, 110, 125, 0.15);
-```
-
-}
-
-.person-meta-item:last-child {
-
-```
-border-right:
-    none;
-```
-
-}
-
-.person-meta-label {
-
-```
-display: block;
-
-margin-bottom: 6px;
-
-font-size: 8px;
-
-letter-spacing: 1.5px;
-
-color:
-    rgba(140, 150, 160, 0.5);
-```
-
-}
-
-.person-meta-value {
-
-```
-font-size: 12px;
-
-color:
-    rgba(205, 215, 225, 0.8);
-```
-
-}
-
-/* =========================================================
-ОСНОВАНИЕ ВНЕСЕНИЯ
-========================================================= */
-
-.person-card-reason {
-
-```
-padding: 20px 25px;
-
-border-bottom:
-    1px solid
-    rgba(100, 110, 125, 0.18);
-```
-
-}
-
-.person-section-label {
-
-```
-margin-bottom: 8px;
-
-font-size: 9px;
-
-letter-spacing: 2px;
-
-color:
-    rgba(190, 60, 60, 0.7);
-```
-
-}
-
-.person-card-reason p {
-
-```
-margin: 0;
-
-font-size: 13px;
-
-line-height: 1.8;
-
-color:
-    rgba(175, 185, 195, 0.72);
-```
-
-}
-
-/* =========================================================
-ОФИЦИАЛЬНЫЙ ДОКУМЕНТ
-========================================================= */
-
-.person-card-document {
-
-```
-padding: 18px 25px;
-```
-
-}
-
-.person-document-button {
-
-```
-display: inline-flex;
-
-align-items: center;
-
-justify-content: space-between;
-
-gap: 25px;
-
-min-width: 260px;
-
-padding: 10px 14px;
-
-border:
-    1px solid
-    rgba(120, 130, 145, 0.35);
-
-background:
-    rgba(20, 24, 31, 0.65);
-
-color:
-    rgba(190, 200, 210, 0.8);
-
-text-decoration: none;
-
-font-size: 9px;
-
-letter-spacing: 1px;
-
-transition:
-    0.2s ease;
-```
-
-}
-
-.person-document-button:hover {
-
-```
-border-color:
-    rgba(190, 60, 60, 0.65);
-
-background:
-    rgba(50, 22, 25, 0.55);
-
-color:
-    rgba(235, 240, 245, 0.95);
-```
-
-}
-
-.person-document-button span:last-child {
-
-```
-color:
-    rgba(190, 65, 65, 0.8);
-
-font-size: 16px;
-```
-
-}
-
-.person-document-unavailable {
-
-```
-font-size: 9px;
-
-letter-spacing: 1.3px;
-
-color:
-    rgba(130, 140, 150, 0.4);
-```
-
-}
-
-/* =========================================================
-ПУСТОЙ РЕЕСТР
-========================================================= */
-
-.interpol-empty-state {
-
-```
-margin-top: 30px;
-
-padding: 55px 35px;
-
-text-align: center;
-
-border:
-    1px solid
-    rgba(100, 110, 125, 0.22);
-
-background:
-    linear-gradient(
-        145deg,
-        rgba(20, 24, 31, 0.8),
-        rgba(10, 13, 18, 0.9)
-    );
-```
-
-}
-
-.empty-code {
-
-```
-margin-bottom: 20px;
-
-font-size: 10px;
-
-letter-spacing: 2px;
-
-color:
-    rgba(150, 160, 170, 0.4);
-```
-
-}
-
-.interpol-empty-state h3 {
-
-```
-margin: 0 0 16px;
-
-font-size: 15px;
-
-letter-spacing: 2px;
-
-color:
-    rgba(200, 210, 220, 0.7);
-```
-
-}
-
-.interpol-empty-state p {
-
-```
-margin: 0;
-
-line-height: 1.8;
-
-font-size: 12px;
-
-color:
-    rgba(145, 155, 165, 0.55);
-```
-
-}
-
-/* =========================================================
-АДАПТИВНОСТЬ РЕЕСТРА ПЕРСОН
-========================================================= */
-
-@media (max-width: 700px) {
-
-```
-.person-card-main {
-
-    grid-template-columns:
-        1fr;
-
-}
-
-
-.person-photo-container {
-
-    width: 100px;
-
-    height: 125px;
-
-}
-
-
-.person-meta {
-
-    grid-template-columns:
-        1fr;
-
-}
-
-
-.person-meta-item {
-
-    border-right:
-        none;
-
-    border-bottom:
-        1px solid
-        rgba(100, 110, 125, 0.15);
-
-}
-
-
-.person-meta-item:last-child {
-
-    border-bottom:
-        none;
-
-}
-
-
-.person-name {
-
-    font-size: 18px;
-
-}
-
-
-.person-document-button {
-
-    width: 100%;
-
-    min-width: 0;
-
-}
-
-}
-
