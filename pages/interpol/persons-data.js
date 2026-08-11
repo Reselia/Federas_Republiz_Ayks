@@ -23,7 +23,7 @@ const persons = [
 
         reason: "РЕЗОЛЮЦИЯ № 1211 SHV-А",
 
-        document: ""
+        document: "https://drive.google.com/file/d/1pPt1CTdNYxOWWYP5O36dmdPMBIKYIiDo/view?usp=sharing"
 
     }
 
